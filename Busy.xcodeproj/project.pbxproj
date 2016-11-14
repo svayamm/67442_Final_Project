@@ -15,6 +15,12 @@
 		A430D7C11DD89016004C6AAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A430D7BF1DD89016004C6AAF /* LaunchScreen.storyboard */; };
 		A430D7CC1DD89017004C6AAF /* BusyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7CB1DD89017004C6AAF /* BusyTests.swift */; };
 		A430D7D71DD89017004C6AAF /* BusyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7D61DD89017004C6AAF /* BusyUITests.swift */; };
+		A430D7E71DD955E3004C6AAF /* ProjectList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A430D7E61DD955E3004C6AAF /* ProjectList.storyboard */; };
+		A430D7EB1DD95DE5004C6AAF /* NewProjectTypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A430D7EA1DD95DE5004C6AAF /* NewProjectTypes.storyboard */; };
+		A430D7ED1DD964AD004C6AAF /* ProjectDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A430D7EC1DD964AD004C6AAF /* ProjectDetails.storyboard */; };
+		A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */; };
+		A430D7F11DD964ED004C6AAF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */; };
+		A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F21DD966EB004C6AAF /* NewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		A430D7D21DD89017004C6AAF /* BusyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A430D7D61DD89017004C6AAF /* BusyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusyUITests.swift; sourceTree = "<group>"; };
 		A430D7D81DD89017004C6AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A430D7E61DD955E3004C6AAF /* ProjectList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectList.storyboard; sourceTree = "<group>"; };
+		A430D7EA1DD95DE5004C6AAF /* NewProjectTypes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewProjectTypes.storyboard; sourceTree = "<group>"; };
+		A430D7EC1DD964AD004C6AAF /* ProjectDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectDetails.storyboard; sourceTree = "<group>"; };
+		A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
+		A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		A430D7F21DD966EB004C6AAF /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +112,14 @@
 			isa = PBXGroup;
 			children = (
 				A430D7B31DD89015004C6AAF /* AppDelegate.swift */,
-				A430D7B51DD89015004C6AAF /* ViewController.swift */,
-				A430D7B71DD89016004C6AAF /* Main.storyboard */,
+				A430D7F81DD96744004C6AAF /* 'Agenda' Tab */,
 				A430D7BD1DD89016004C6AAF /* Assets.xcassets */,
 				A430D7BF1DD89016004C6AAF /* LaunchScreen.storyboard */,
 				A430D7C21DD89017004C6AAF /* Info.plist */,
 				A430D7BA1DD89016004C6AAF /* Busy.xcdatamodeld */,
+				A430D7F71DD96730004C6AAF /* 'List of Projects' Tab */,
+				A430D7F51DD96703004C6AAF /* 'New' Tab */,
+				A430D7F61DD9671F004C6AAF /* Individual Project Detail */,
 			);
 			path = Busy;
 			sourceTree = "<group>";
@@ -126,6 +140,42 @@
 				A430D7D81DD89017004C6AAF /* Info.plist */,
 			);
 			path = BusyUITests;
+			sourceTree = "<group>";
+		};
+		A430D7F51DD96703004C6AAF /* 'New' Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A430D7EA1DD95DE5004C6AAF /* NewProjectTypes.storyboard */,
+				A430D7F21DD966EB004C6AAF /* NewViewController.swift */,
+			);
+			name = "'New' Tab";
+			sourceTree = "<group>";
+		};
+		A430D7F61DD9671F004C6AAF /* Individual Project Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A430D7EC1DD964AD004C6AAF /* ProjectDetails.storyboard */,
+				A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */,
+			);
+			name = "Individual Project Detail";
+			sourceTree = "<group>";
+		};
+		A430D7F71DD96730004C6AAF /* 'List of Projects' Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A430D7E61DD955E3004C6AAF /* ProjectList.storyboard */,
+				A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */,
+			);
+			name = "'List of Projects' Tab";
+			sourceTree = "<group>";
+		};
+		A430D7F81DD96744004C6AAF /* 'Agenda' Tab */ = {
+			isa = PBXGroup;
+			children = (
+				A430D7B51DD89015004C6AAF /* ViewController.swift */,
+				A430D7B71DD89016004C6AAF /* Main.storyboard */,
+			);
+			name = "'Agenda' Tab";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A430D7E71DD955E3004C6AAF /* ProjectList.storyboard in Resources */,
+				A430D7EB1DD95DE5004C6AAF /* NewProjectTypes.storyboard in Resources */,
 				A430D7C11DD89016004C6AAF /* LaunchScreen.storyboard in Resources */,
+				A430D7ED1DD964AD004C6AAF /* ProjectDetails.storyboard in Resources */,
 				A430D7BE1DD89016004C6AAF /* Assets.xcassets in Resources */,
 				A430D7B91DD89016004C6AAF /* Main.storyboard in Resources */,
 			);
@@ -262,9 +315,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
 				A430D7B41DD89015004C6AAF /* AppDelegate.swift in Sources */,
+				A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */,
 				A430D7BC1DD89016004C6AAF /* Busy.xcdatamodeld in Sources */,
+				A430D7F11DD964ED004C6AAF /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
