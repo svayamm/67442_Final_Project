@@ -21,6 +21,10 @@
 		A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */; };
 		A430D7F11DD964ED004C6AAF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */; };
 		A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F21DD966EB004C6AAF /* NewViewController.swift */; };
+		CB53D1B11DE76C2E00AEEFAC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B01DE76C2E00AEEFAC /* Project.swift */; };
+		CB53D1B31DE76CE000AEEFAC /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B21DE76CE000AEEFAC /* Assignment.swift */; };
+		CB53D1B71DE76D8900AEEFAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B61DE76D8900AEEFAC /* User.swift */; };
+		CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B81DE76DA500AEEFAC /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A430D7F21DD966EB004C6AAF /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		CB53D1B01DE76C2E00AEEFAC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		CB53D1B21DE76CE000AEEFAC /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		CB53D1B61DE76D8900AEEFAC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CB53D1B81DE76DA500AEEFAC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		A430D7B21DD89015004C6AAF /* Busy */ = {
 			isa = PBXGroup;
 			children = (
+				CB53D1AF1DE76BBE00AEEFAC /* Models */,
 				A430D7B31DD89015004C6AAF /* AppDelegate.swift */,
 				A430D7F81DD96744004C6AAF /* 'Agenda' Tab */,
 				A430D7BD1DD89016004C6AAF /* Assets.xcassets */,
@@ -176,6 +185,17 @@
 				A430D7B71DD89016004C6AAF /* Main.storyboard */,
 			);
 			name = "'Agenda' Tab";
+			sourceTree = "<group>";
+		};
+		CB53D1AF1DE76BBE00AEEFAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB53D1B01DE76C2E00AEEFAC /* Project.swift */,
+				CB53D1B21DE76CE000AEEFAC /* Assignment.swift */,
+				CB53D1B61DE76D8900AEEFAC /* User.swift */,
+				CB53D1B81DE76DA500AEEFAC /* Task.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,9 +337,13 @@
 			files = (
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
+				CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */,
 				A430D7B41DD89015004C6AAF /* AppDelegate.swift in Sources */,
 				A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */,
+				CB53D1B31DE76CE000AEEFAC /* Assignment.swift in Sources */,
+				CB53D1B71DE76D8900AEEFAC /* User.swift in Sources */,
 				A430D7BC1DD89016004C6AAF /* Busy.xcdatamodeld in Sources */,
+				CB53D1B11DE76C2E00AEEFAC /* Project.swift in Sources */,
 				A430D7F11DD964ED004C6AAF /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +587,7 @@
 				A430D7DD1DD89017004C6AAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A430D7DE1DD89017004C6AAF /* Build configuration list for PBXNativeTarget "BusyTests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +596,7 @@
 				A430D7E01DD89017004C6AAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A430D7E11DD89017004C6AAF /* Build configuration list for PBXNativeTarget "BusyUITests" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +605,7 @@
 				A430D7E31DD89017004C6AAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
