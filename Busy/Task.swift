@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Task {
+struct Task {
     let id: UUID
     var name: String
     var description: String
@@ -19,5 +19,20 @@ class Task {
         self.name = name
         self.description = description
         self.dueDate = dueDate
+    }
+    mutating func changeName(name: String) {
+        self.name = name
+    }
+    mutating func changeDescription(description: String) {
+        self.description = description
+    }
+    mutating func changeDueDate(dueDate: NSDate) {
+        self.dueDate = dueDate
+    }
+}
+
+extension Task: Equatable {
+    static public func ==(lhs: Task, rhs: Task) -> Bool {
+        return (lhs.id == rhs.id)
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Assignment {
+struct Assignment {
     let id: UUID
     let project: Int
     let user: Int
@@ -22,6 +22,6 @@ class Assignment {
 
 extension Assignment: Equatable {
     static public func ==(lhs: Assignment, rhs: Assignment) -> Bool {
-        return (lhs.project == rhs.project && lhs.user == rhs.user)
+        return (lhs.id == rhs.id)
     }
 }
