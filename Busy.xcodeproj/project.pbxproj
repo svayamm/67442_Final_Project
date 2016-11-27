@@ -26,6 +26,8 @@
 		A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */; };
 		A430D7F11DD964ED004C6AAF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */; };
 		A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F21DD966EB004C6AAF /* NewViewController.swift */; };
+		A4C98A581DEB9345007BA672 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C98A571DEB9345007BA672 /* SignIn.storyboard */; };
+		A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C98A591DEB9362007BA672 /* SignInViewController.swift */; };
 		A5B1CA64326A98756A8C5145 /* Pods_Busy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD4A25D0EA8A660326258AC /* Pods_Busy.framework */; };
 		CB53D1B11DE76C2E00AEEFAC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B01DE76C2E00AEEFAC /* Project.swift */; };
 		CB53D1B31DE76CE000AEEFAC /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B21DE76CE000AEEFAC /* Assignment.swift */; };
@@ -76,6 +78,9 @@
 		A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A430D7F21DD966EB004C6AAF /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		A4C98A571DEB9345007BA672 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		A4C98A591DEB9362007BA672 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A4C98A5B1DEB94A4007BA672 /* Busy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Busy-Bridging-Header.h"; sourceTree = "<group>"; };
 		ADC30415670737454444E253 /* Pods-Busy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Busy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Busy/Pods-Busy.release.xcconfig"; sourceTree = "<group>"; };
 		C044EE2B2CB42A8FE4CE4CD4 /* Pods-BusyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusyUITests/Pods-BusyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB53D1B01DE76C2E00AEEFAC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -125,6 +130,7 @@
 				A430D7B11DD89015004C6AAF /* Products */,
 				B61513529019D282053D0DFA /* Pods */,
 				BB17A35D6544B677AA8D4C02 /* Frameworks */,
+				A4C98A5B1DEB94A4007BA672 /* Busy-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +147,7 @@
 		A430D7B21DD89015004C6AAF /* Busy */ = {
 			isa = PBXGroup;
 			children = (
+				A4C98A561DEB9324007BA672 /* Sign-in launch */,
 				CB53D1AF1DE76BBE00AEEFAC /* Models */,
 				A430D7B31DD89015004C6AAF /* AppDelegate.swift */,
 				A430D7F81DD96744004C6AAF /* 'Agenda' Tab */,
@@ -207,6 +214,15 @@
 				A430D7B71DD89016004C6AAF /* Main.storyboard */,
 			);
 			name = "'Agenda' Tab";
+			sourceTree = "<group>";
+		};
+		A4C98A561DEB9324007BA672 /* Sign-in launch */ = {
+			isa = PBXGroup;
+			children = (
+				A4C98A571DEB9345007BA672 /* SignIn.storyboard */,
+				A4C98A591DEB9362007BA672 /* SignInViewController.swift */,
+			);
+			name = "Sign-in launch";
 			sourceTree = "<group>";
 		};
 		B61513529019D282053D0DFA /* Pods */ = {
@@ -320,6 +336,7 @@
 				TargetAttributes = {
 					A430D7AF1DD89015004C6AAF = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					A430D7C61DD89017004C6AAF = {
@@ -359,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C98A581DEB9345007BA672 /* SignIn.storyboard in Resources */,
 				A430D7E71DD955E3004C6AAF /* ProjectList.storyboard in Resources */,
 				A430D7EB1DD95DE5004C6AAF /* NewProjectTypes.storyboard in Resources */,
 				A430D7C11DD89016004C6AAF /* LaunchScreen.storyboard in Resources */,
@@ -530,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */,
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
 				CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */,
@@ -690,10 +709,13 @@
 			baseConfigurationReference = 9EBDDC3B1BDB17A8E5DF762C /* Pods-Busy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Busy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.Busy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Busy-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -703,10 +725,12 @@
 			baseConfigurationReference = ADC30415670737454444E253 /* Pods-Busy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Busy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cmuis.Busy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Busy-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
