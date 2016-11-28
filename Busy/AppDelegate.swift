@@ -69,6 +69,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("\(error.localizedDescription)")
         }
     }
+    /* Important: Do not use the Google IDs available in the userId field or the user's 
+       profile information to communicate the currently signed in user to your backend 
+       server. Instead, send ID tokens, which can be securely validated on the server. */
+    
+    
     func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
                 withError error: NSError!) {
         // Perform any operations when the user disconnects from app here.
