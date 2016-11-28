@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "4c3c19e39dc03deb06bc56afb6781997"
+build_time: [533620862, 181262000]
+inputs:
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectNet-2.0.5/Sources/Net.swift": [533620572, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectNet-2.0.5/Sources/NetEvent.swift": [533620572, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectNet-2.0.5/Sources/NetNamedPipe.swift": [533620572, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectNet-2.0.5/Sources/NetTCP.swift": [533620572, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectNet-2.0.5/Sources/NetTCPSSL.swift": [533620572, 0]

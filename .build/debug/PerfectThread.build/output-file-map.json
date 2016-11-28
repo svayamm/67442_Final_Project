@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/master.swiftdeps"
+  },
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectThread-2.0.3/Sources/Threading.swift": {
+    "dependencies": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/Threading.d",
+    "object": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/Threading.swift.o",
+    "swiftmodule": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/Threading~partial.swiftmodule",
+    "swift-dependencies": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/Threading.swiftdeps"
+  },
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectThread-2.0.3/Sources/ThreadQueue.swift": {
+    "dependencies": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/ThreadQueue.d",
+    "object": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/ThreadQueue.swift.o",
+    "swiftmodule": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/ThreadQueue~partial.swiftmodule",
+    "swift-dependencies": "/Users/jw/Documents/67442_Final_Project/.build/debug/PerfectThread.build/ThreadQueue.swiftdeps"
+  }
+}

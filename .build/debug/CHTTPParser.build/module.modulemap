@@ -1,0 +1,5 @@
+module CHTTPParser {
+    umbrella "/Users/jw/Documents/67442_Final_Project/Packages/PerfectHTTPServer-2.0.6/Sources/CHTTPParser/include"
+    link "CHTTPParser"
+    export *
+}

@@ -1,0 +1,9 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "bef9543a2139cd43eb4fc2ffefb19388"
+build_time: [533620866, 933406000]
+inputs:
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectHTTPServer-2.0.6/Sources/PerfectHTTPServer/HPACK.swift": [533620541, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectHTTPServer-2.0.6/Sources/PerfectHTTPServer/HTTP11Request.swift": [533620541, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectHTTPServer-2.0.6/Sources/PerfectHTTPServer/HTTP11Response.swift": [533620541, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectHTTPServer-2.0.6/Sources/PerfectHTTPServer/HTTP2.swift": [533620541, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectHTTPServer-2.0.6/Sources/PerfectHTTPServer/HTTPServer.swift": [533620541, 0]

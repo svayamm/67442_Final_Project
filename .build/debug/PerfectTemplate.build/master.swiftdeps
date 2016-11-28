@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "9640fa155a64c769f58872fff8a02dc0"
+build_time: [533620869, 15899000]
+inputs:
+  "/Users/jw/Documents/67442_Final_Project/Sources/arguments.swift": [533620444, 0]
+  "/Users/jw/Documents/67442_Final_Project/Sources/main.swift": [533620444, 0]

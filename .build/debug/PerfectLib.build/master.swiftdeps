@@ -1,0 +1,14 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "2a8d324c9fc7d4aeccb972a679c45e3a"
+build_time: [533620856, 587700000]
+inputs:
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/Bytes.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/Dir.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/File.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/JSONConvertible.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/Log.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/PerfectError.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/PerfectServer.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/SwiftCompatibility.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/SysProcess.swift": [533620543, 0]
+  "/Users/jw/Documents/67442_Final_Project/Packages/PerfectLib-2.0.3/Sources/PerfectLib/Utilities.swift": [533620543, 0]
