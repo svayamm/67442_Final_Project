@@ -147,14 +147,14 @@
 		A430D7B21DD89015004C6AAF /* Busy */ = {
 			isa = PBXGroup;
 			children = (
-				A4C98A561DEB9324007BA672 /* Sign-in launch */,
-				CB53D1AF1DE76BBE00AEEFAC /* Models */,
 				A430D7B31DD89015004C6AAF /* AppDelegate.swift */,
-				A430D7F81DD96744004C6AAF /* 'Agenda' Tab */,
 				A430D7BD1DD89016004C6AAF /* Assets.xcassets */,
 				A430D7BF1DD89016004C6AAF /* LaunchScreen.storyboard */,
 				A430D7C21DD89017004C6AAF /* Info.plist */,
 				A430D7BA1DD89016004C6AAF /* Busy.xcdatamodeld */,
+				CB53D1AF1DE76BBE00AEEFAC /* Models */,
+				A4C98A561DEB9324007BA672 /* Sign-in launch */,
+				A430D7F81DD96744004C6AAF /* 'Agenda' Tab */,
 				A430D7F71DD96730004C6AAF /* 'List of Projects' Tab */,
 				A430D7F51DD96703004C6AAF /* 'New' Tab */,
 				A430D7F61DD9671F004C6AAF /* Individual Project Detail */,
