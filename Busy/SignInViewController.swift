@@ -16,11 +16,17 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Add Google sign-in button
+        setupGoogleButton()
+        
+    }
+    
+    func setupGoogleButton() {
+        // Add Google sign-in button programatically
         let googleButton = GIDSignInButton()
         googleButton.frame = CGRect(x: 25, y: 300, width: view.frame.width-50, height: 50 ) // magic numbers!
         view.addSubview(googleButton)
         
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
     override func didReceiveMemoryWarning() {
