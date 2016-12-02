@@ -80,7 +80,6 @@
 		A430D7F21DD966EB004C6AAF /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		A4C98A571DEB9345007BA672 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		A4C98A591DEB9362007BA672 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		A4C98A5B1DEB94A4007BA672 /* Busy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Busy-Bridging-Header.h"; sourceTree = "<group>"; };
 		ADC30415670737454444E253 /* Pods-Busy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Busy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Busy/Pods-Busy.release.xcconfig"; sourceTree = "<group>"; };
 		C044EE2B2CB42A8FE4CE4CD4 /* Pods-BusyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusyUITests/Pods-BusyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB53D1B01DE76C2E00AEEFAC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -130,7 +129,6 @@
 				A430D7B11DD89015004C6AAF /* Products */,
 				B61513529019D282053D0DFA /* Pods */,
 				BB17A35D6544B677AA8D4C02 /* Frameworks */,
-				A4C98A5B1DEB94A4007BA672 /* Busy-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};

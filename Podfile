@@ -6,6 +6,8 @@ target 'Busy' do
   use_frameworks!
 
   # Pods for Busy
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
   pod 'Google/SignIn'
 
   target 'BusyTests' do
