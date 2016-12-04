@@ -28,6 +28,8 @@
 		A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F21DD966EB004C6AAF /* NewViewController.swift */; };
 		A4C98A581DEB9345007BA672 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C98A571DEB9345007BA672 /* SignIn.storyboard */; };
 		A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C98A591DEB9362007BA672 /* SignInViewController.swift */; };
+		A4F0D3DA1DF3B4590056E3E3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0D3D81DF3B4590056E3E3 /* TableViewCell.swift */; };
+		A4F0D3DB1DF3B4590056E3E3 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F0D3D91DF3B4590056E3E3 /* TableViewCell.xib */; };
 		A5B1CA64326A98756A8C5145 /* Pods_Busy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD4A25D0EA8A660326258AC /* Pods_Busy.framework */; };
 		CB53D1B11DE76C2E00AEEFAC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B01DE76C2E00AEEFAC /* Project.swift */; };
 		CB53D1B31DE76CE000AEEFAC /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B21DE76CE000AEEFAC /* Assignment.swift */; };
@@ -80,6 +82,8 @@
 		A430D7F21DD966EB004C6AAF /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		A4C98A571DEB9345007BA672 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		A4C98A591DEB9362007BA672 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A4F0D3D81DF3B4590056E3E3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A4F0D3D91DF3B4590056E3E3 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		ADC30415670737454444E253 /* Pods-Busy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Busy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Busy/Pods-Busy.release.xcconfig"; sourceTree = "<group>"; };
 		C044EE2B2CB42A8FE4CE4CD4 /* Pods-BusyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusyUITests/Pods-BusyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB53D1B01DE76C2E00AEEFAC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 			children = (
 				A430D7B51DD89015004C6AAF /* ViewController.swift */,
 				A430D7B71DD89016004C6AAF /* Main.storyboard */,
+				A4F0D3D81DF3B4590056E3E3 /* TableViewCell.swift */,
+				A4F0D3D91DF3B4590056E3E3 /* TableViewCell.xib */,
 			);
 			name = "'Agenda' Tab";
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				A430D7E71DD955E3004C6AAF /* ProjectList.storyboard in Resources */,
 				A430D7EB1DD95DE5004C6AAF /* NewProjectTypes.storyboard in Resources */,
 				A430D7C11DD89016004C6AAF /* LaunchScreen.storyboard in Resources */,
+				A4F0D3DB1DF3B4590056E3E3 /* TableViewCell.xib in Resources */,
 				A430D7ED1DD964AD004C6AAF /* ProjectDetails.storyboard in Resources */,
 				A430D7BE1DD89016004C6AAF /* Assets.xcassets in Resources */,
 				A430D7B91DD89016004C6AAF /* Main.storyboard in Resources */,
@@ -546,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F0D3DA1DF3B4590056E3E3 /* TableViewCell.swift in Sources */,
 				A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */,
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
