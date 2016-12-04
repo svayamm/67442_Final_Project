@@ -8,7 +8,11 @@ target 'Busy' do
   # Pods for Busy
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
   pod 'Google/SignIn'
+  pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper', '~> 2.2'
 
   target 'BusyTests' do
     inherit! :search_paths
