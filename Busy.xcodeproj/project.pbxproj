@@ -35,6 +35,7 @@
 		CB53D1B31DE76CE000AEEFAC /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B21DE76CE000AEEFAC /* Assignment.swift */; };
 		CB53D1B71DE76D8900AEEFAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B61DE76D8900AEEFAC /* User.swift */; };
 		CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B81DE76DA500AEEFAC /* Task.swift */; };
+		CBED6ECC1DF5EB04000F60BE /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBED6ECB1DF5EB04000F60BE /* ProjectTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		CB53D1B21DE76CE000AEEFAC /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		CB53D1B61DE76D8900AEEFAC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CB53D1B81DE76DA500AEEFAC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		CBED6ECB1DF5EB04000F60BE /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		D4BDC5419157CFE15EF18F06 /* Pods-BusyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusyTests/Pods-BusyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DAEE739718636D2EAB2FE716 /* Pods-BusyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusyTests/Pods-BusyTests.release.xcconfig"; sourceTree = "<group>"; };
 		F644DFB69EC6F403DFA13755 /* Pods-BusyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusyUITests/Pods-BusyUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			children = (
 				A430D7E61DD955E3004C6AAF /* ProjectList.storyboard */,
 				A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */,
+				CBED6ECB1DF5EB04000F60BE /* ProjectTableViewCell.swift */,
 			);
 			name = "'List of Projects' Tab";
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 				A4F0D3DA1DF3B4590056E3E3 /* TableViewCell.swift in Sources */,
 				A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */,
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
+				CBED6ECC1DF5EB04000F60BE /* ProjectTableViewCell.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
 				CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */,
 				A430D7B41DD89015004C6AAF /* AppDelegate.swift in Sources */,
