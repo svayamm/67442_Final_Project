@@ -8,3 +8,7 @@
 
 import Foundation
 // add firebase
+
+
+
+// check authentication state, call functions for filtering table and actions if authenticated

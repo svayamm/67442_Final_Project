@@ -13,10 +13,12 @@ target 'Busy' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
   pod 'ObjectMapper', '~> 2.2'
+  pod 'SwiftForms'
 
   target 'BusyTests' do
     inherit! :search_paths
     # Pods for testing
+    # Add Quick and Nimble for testing
   end
 
   target 'BusyUITests' do
