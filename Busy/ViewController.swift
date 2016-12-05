@@ -12,7 +12,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var agendaTableView: UITableView!
-
+    @IBOutlet var timeframeSegment: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
