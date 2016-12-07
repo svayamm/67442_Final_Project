@@ -57,7 +57,7 @@
         <!--View Controller-->
         <scene sceneID="WAa-6O-fKn">
             <objects>
-                <viewController id="zB9-96-DqJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPage" id="zB9-96-DqJ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="llK-sn-DRW"/>
                         <viewControllerLayoutGuide type="bottom" id="MRA-hR-VYO"/>
