@@ -1,5 +1,5 @@
 //
-//  ProjectTableViewCell.swift
+//  ArProjectTableViewCell.swift
 //  Busy
 //
 //  Created by j w on 12/7/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProjectTableViewCell: UITableViewCell {
+class ArProjectTableViewCell: UITableViewCell {
     @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var taskCountLabel: UILabel!
     @IBOutlet weak var taskCount: UILabel!

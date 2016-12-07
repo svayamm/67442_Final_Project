@@ -65,9 +65,9 @@ class ViewController: UIViewController {
     // MARK: - Agenda Page Segues
     //For the bottom toolbar, commented out since not hooked up to anything yet
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showProjects" {
-            let showProjects:ProjectsViewController = segue.destinationViewController as! ProjectsViewController
-        }
+//        if segue.identifier == "showProjects" {
+//            let showProjects:ProjectsViewController = segue.destinationViewController as! ProjectsViewController
+//        }
 //        if segue.identifier == "showNew" {
 //            let showNew:NewViewController = segue.destinationViewController as! NewViewController
 //        }
