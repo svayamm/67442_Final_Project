@@ -1,10 +1,9 @@
 //
-//  UserJSONParser.swift
+//  ProjectJSONParser.swift
 //  Busy
 //
-//  Created by Svayam Mishra on 06/12/2016.
+//  Created by j w on 12/7/16.
 //  Copyright © 2016 Svayam Mishra. All rights reserved.
 //
 
 import Foundation
-

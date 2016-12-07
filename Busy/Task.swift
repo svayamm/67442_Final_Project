@@ -15,6 +15,7 @@ struct Task {
     var name: String
     var description: String
     var dueDate: NSDate
+    var priority: Int
     // include priority variable?
     
     init(project: Project, name: String, description: String, dueDate: NSDate) {
@@ -23,6 +24,7 @@ struct Task {
         self.name = name
         self.description = description
         self.dueDate = dueDate
+        self.priority = 3 //default: 3 = high priority
         self.complete = false // default: false
     }
     mutating func changeName(name: String) {
@@ -41,6 +43,9 @@ struct Task {
     
     func isComplete() -> Bool {
         return self.complete
+    }
+    mutating func changePriority(priority: Int) {
+        self.priority = priority
     }
 }
 
