@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+class ProjectJSONParser {
+    
+    
+    class func parse(url: String){
+        let theURL: NSURL = NSURL(string: url)!
+        
+        let data = NSData(contentsOf: theURL as URL)!
+        let swiftyjson = JSON(data: data as Data)
+        
+        //        if let owner_login = swiftyjson["items"][0]["owner"]["login"].string {
+        //            print(owner_login)
+        //        }
+    }
+}
