@@ -34,7 +34,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
                 weakSelf?.present(controller, animated: true, completion: nil)
             }
         }
-        
     }
     
     func setupGoogleButton() {

@@ -26,6 +26,7 @@
 		A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F21DD966EB004C6AAF /* NewViewController.swift */; };
 		A465E9CE1DF5F3C500C40CF2 /* ProjectList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465E9CD1DF5F3C500C40CF2 /* ProjectList.storyboard */; };
 		A465E9D01DF5F40100C40CF2 /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465E9CF1DF5F40100C40CF2 /* ProjectDetail.storyboard */; };
+		A465E9D41DF7B67D00C40CF2 /* UserJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465E9D31DF7B67D00C40CF2 /* UserJSONParser.swift */; };
 		A47584021DF5BFB800C36AE4 /* NewTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47584011DF5BFB800C36AE4 /* NewTypesViewController.swift */; };
 		A4C98A581DEB9345007BA672 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C98A571DEB9345007BA672 /* SignIn.storyboard */; };
 		A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C98A591DEB9362007BA672 /* SignInViewController.swift */; };
@@ -82,6 +83,7 @@
 		A430D7F21DD966EB004C6AAF /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		A465E9CD1DF5F3C500C40CF2 /* ProjectList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectList.storyboard; sourceTree = "<group>"; };
 		A465E9CF1DF5F40100C40CF2 /* ProjectDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectDetail.storyboard; sourceTree = "<group>"; };
+		A465E9D31DF7B67D00C40CF2 /* UserJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserJSONParser.swift; sourceTree = "<group>"; };
 		A47584011DF5BFB800C36AE4 /* NewTypesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTypesViewController.swift; sourceTree = "<group>"; };
 		A4C98A571DEB9345007BA672 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		A4C98A591DEB9362007BA672 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -159,11 +161,13 @@
 				A430D7C21DD89017004C6AAF /* Info.plist */,
 				A430D7BA1DD89016004C6AAF /* Busy.xcdatamodeld */,
 				CB53D1AF1DE76BBE00AEEFAC /* Models */,
+				A465E9D11DF73F4800C40CF2 /* Parsers */,
 				A4C98A561DEB9324007BA672 /* Sign-in launch */,
 				A430D7F81DD96744004C6AAF /* 'Agenda' Tab */,
-				A430D7F71DD96730004C6AAF /* 'List of Projects' Tab */,
 				A430D7F51DD96703004C6AAF /* 'New' Tab */,
+				A430D7F71DD96730004C6AAF /* 'List of Projects' Tab */,
 				A430D7F61DD9671F004C6AAF /* Individual Project Detail */,
+				A465E9D61DF8189C00C40CF2 /* 'User Profile' tab */,
 			);
 			path = Busy;
 			sourceTree = "<group>";
@@ -226,6 +230,21 @@
 			name = "'Agenda' Tab";
 			sourceTree = "<group>";
 		};
+		A465E9D11DF73F4800C40CF2 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				A465E9D31DF7B67D00C40CF2 /* UserJSONParser.swift */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		A465E9D61DF8189C00C40CF2 /* 'User Profile' tab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "'User Profile' tab";
+			sourceTree = "<group>";
+		};
 		A4C98A561DEB9324007BA672 /* Sign-in launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,10 +280,10 @@
 		CB53D1AF1DE76BBE00AEEFAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CB53D1B01DE76C2E00AEEFAC /* Project.swift */,
-				CB53D1B21DE76CE000AEEFAC /* Assignment.swift */,
 				CB53D1B61DE76D8900AEEFAC /* User.swift */,
+				CB53D1B01DE76C2E00AEEFAC /* Project.swift */,
 				CB53D1B81DE76DA500AEEFAC /* Task.swift */,
+				CB53D1B21DE76CE000AEEFAC /* Assignment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -563,6 +582,7 @@
 				A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */,
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
 				CBED6ECC1DF5EB04000F60BE /* ProjectTableViewCell.swift in Sources */,
+				A465E9D41DF7B67D00C40CF2 /* UserJSONParser.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
 				CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */,
 				A430D7B41DD89015004C6AAF /* AppDelegate.swift in Sources */,

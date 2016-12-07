@@ -64,7 +64,7 @@ class NewFormViewController: FormViewController {
     
     fileprivate func loadForm() {
         
-        let form = FormDescriptor(title: "Example Form")
+        let form = FormDescriptor(title: "New Project Form")
         
         let section1 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
         

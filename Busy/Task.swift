@@ -10,15 +10,20 @@ import Foundation
 
 struct Task {
     let id: UUID
+    let projectID: String
+    var complete: Bool
     var name: String
     var description: String
     var dueDate: NSDate
+    // include priority variable?
     
-    init(name: String, description: String, dueDate: NSDate) {
+    init(project: Project, name: String, description: String, dueDate: NSDate) {
         self.id = NSUUID.init() as UUID
+        self.projectID = project.id.uuidString
         self.name = name
         self.description = description
         self.dueDate = dueDate
+        self.complete = false // default: false
     }
     mutating func changeName(name: String) {
         self.name = name
@@ -28,6 +33,14 @@ struct Task {
     }
     mutating func changeDueDate(dueDate: NSDate) {
         self.dueDate = dueDate
+    }
+    
+    mutating func setComplete() {
+        self.complete = true
+    }
+    
+    func isComplete() -> Bool {
+        return self.complete
     }
 }
 
