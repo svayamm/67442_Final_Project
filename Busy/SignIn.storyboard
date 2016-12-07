@@ -37,10 +37,21 @@
                             <constraint firstItem="Y6O-wY-AkK" firstAttribute="centerX" secondItem="Qfv-zq-Khh" secondAttribute="centerX" id="jUC-at-dYt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="5hl-zM-DWo" kind="show" identifier="LoginToMain" id="IfN-vs-6oY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJd-jT-hsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="605.60000000000002" y="-74.212893553223395"/>
+        </scene>
+        <!--Agenda-->
+        <scene sceneID="Opo-YV-Eyl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Agenda" id="5hl-zM-DWo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zku-aO-OBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="-16"/>
         </scene>
     </scenes>
 </document>

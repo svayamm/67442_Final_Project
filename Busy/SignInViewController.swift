@@ -23,18 +23,27 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
             // If a user object exists
             if user != nil {
-                // Create a new instance of the main storyboard.
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                // Display the 'Agenda' view controller.
+                weak var weakSelf = self // required to fix 'implicit use of self in closure' error
                 
-                // Create an instance of the storyboard's initial view controller.
-                let controller = storyboard.instantiateViewController(withIdentifier: "Agenda") as UIViewController
-                
-                // Display the new view controller.
-                weak var weakSelf = self
-                weakSelf?.present(controller, animated: true, completion: nil)
+                weakSelf?.performSegue(withIdentifier: "LoginToMain", sender: self)
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LoginToMain"
+        {
+            if let destinationVC = segue.destination as?  ViewController {
+                var firebaseUser = FIRAuth.auth()?.currentUser
+                var userObj = User(firebaseUID: (firebaseUser?.uid)!, displayName: (firebaseUser?.displayName)!, email: (firebaseUser?.email)!)
+                // create a new user object (different variable name to differentiate from 'user' used above
+                // This user object will be used internally, passed through the view controllers
+                destinationVC.userObject = userObj
+            }
+        }
+    }
+    
     
     func setupGoogleButton() {
         // Add Google sign-in button programatically

@@ -7,17 +7,37 @@
 //
 
 import UIKit
-// add firebase
+import Firebase
 
 class ViewController: UIViewController {
+    
+    var userObject = User(firebaseUID: "", displayName: "", email: "")
+    // this is the user object that will be used throughout the application henceforth
 
+    
+    @IBOutlet var test: UIButton!
     @IBOutlet var agendaTableView: UITableView!
     @IBOutlet var timeframeSegment: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        print("button!!\n\n\n")
+        let alert = UIAlertController(title: "Testing userObject and FirebaseUser", message: generateMessage(), preferredStyle: .alert)
+        present(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
+    }
+
+    func generateMessage() -> String {
+        //let userF = FIRAuth.auth()?.currentUser
+            let message = "User Object Details: \n  (\(userObject.displayName), \(userObject.email))>"
+            return message
+        }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -13,15 +13,13 @@ struct User {
     let firebaseUID: String // Firebase provides a UID (well, technically Google does, upon authentication)
     var displayName: String
     var email: String
-    var imgURL: URL // Firebase provides a URL for the user's (Google) profile photo
     var projects: [Project] // Denormalising for easier access in Firebase's NoSQL database
     
-    init(firebaseUID: String, displayName: String, email: String, imgURL: URL) {
+    init(firebaseUID: String, displayName: String, email: String) {
         self.id = NSUUID.init() as UUID
         self.firebaseUID = firebaseUID
         self.displayName = displayName
         self.email = email
-        self.imgURL = imgURL
         self.projects = []
     }
     
