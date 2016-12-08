@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VJQ-zT-kAf">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,7 +82,61 @@
                                 <color key="textColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6s-tn-oVh">
+                                <frame key="frameInset" minY="619" width="61" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="KDb-zQ-zcS" kind="show" id="NOB-XR-IxB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imD-Mb-8ML">
+                                <frame key="frameInset" minX="82" minY="620" width="57" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="GTe-qk-rZK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="b4i-Sy-xPR" kind="show" id="ZvM-It-P8x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya4-wX-Og5">
+                                <frame key="frameInset" minX="161" minY="620" width="53" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="2di-Re-QxB" kind="show" id="EA4-5g-d7S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjN-lG-UPY">
+                                <frame key="frameInset" minX="235" minY="620" width="57" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="x8b-ZV-LHb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-oX-0ku">
+                                <frame key="frameInset" minX="317" minY="619" width="58" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BeZ-Nx-8gd" kind="show" id="QDT-Vi-NWw"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="ya4-wX-Og5" firstAttribute="baseline" secondItem="imD-Mb-8ML" secondAttribute="firstBaseline" id="58d-fj-KiD"/>
+                            <constraint firstItem="b4O-oX-0ku" firstAttribute="leading" secondItem="KjN-lG-UPY" secondAttribute="trailing" constant="25" id="5gY-Ez-Rkc"/>
+                            <constraint firstItem="ya4-wX-Og5" firstAttribute="baseline" secondItem="KjN-lG-UPY" secondAttribute="baseline" id="DOM-Cf-Xie"/>
+                            <constraint firstItem="KjN-lG-UPY" firstAttribute="leading" secondItem="ya4-wX-Og5" secondAttribute="trailing" constant="21" id="Mk2-i8-qFf"/>
+                            <constraint firstItem="ya4-wX-Og5" firstAttribute="top" secondItem="KjN-lG-UPY" secondAttribute="top" id="SMd-tF-Abd"/>
+                            <constraint firstItem="ya4-wX-Og5" firstAttribute="leading" secondItem="imD-Mb-8ML" secondAttribute="trailing" constant="22" id="WEJ-AC-Bm8"/>
+                            <constraint firstItem="imD-Mb-8ML" firstAttribute="top" secondItem="ya4-wX-Og5" secondAttribute="top" id="YMT-FB-rfF"/>
+                            <constraint firstItem="k6s-tn-oVh" firstAttribute="top" secondItem="b4O-oX-0ku" secondAttribute="top" id="YQ7-Aj-k2T"/>
+                            <constraint firstItem="ya4-wX-Og5" firstAttribute="baseline" secondItem="KjN-lG-UPY" secondAttribute="firstBaseline" id="err-VA-axf"/>
+                            <constraint firstItem="imD-Mb-8ML" firstAttribute="leading" secondItem="k6s-tn-oVh" secondAttribute="trailing" constant="21" id="gJa-ub-wnN"/>
+                            <constraint firstItem="KjN-lG-UPY" firstAttribute="baseline" secondItem="ya4-wX-Og5" secondAttribute="firstBaseline" id="h1m-Kj-lIt"/>
+                            <constraint firstItem="k6s-tn-oVh" firstAttribute="baseline" secondItem="b4O-oX-0ku" secondAttribute="firstBaseline" id="jgV-Q9-DS4"/>
+                            <constraint firstItem="b4O-oX-0ku" firstAttribute="baseline" secondItem="k6s-tn-oVh" secondAttribute="firstBaseline" id="sJl-gW-csc"/>
+                            <constraint firstItem="imD-Mb-8ML" firstAttribute="baseline" secondItem="ya4-wX-Og5" secondAttribute="baseline" id="twe-OB-qZO"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="agendaTableView" destination="bqb-bj-lCh" id="lo1-C7-Yl3"/>
@@ -99,6 +155,38 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="46.326836581709152"/>
+        </scene>
+        <!--NewProjectTypes-->
+        <scene sceneID="kSy-K2-npT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewProjectTypes" id="2di-Re-QxB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hd-5m-f3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="519"/>
+        </scene>
+        <!--UserProfile-->
+        <scene sceneID="UbM-wI-FtR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserProfile" id="BeZ-Nx-8gd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uiL-kz-ko3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="386" y="481"/>
+        </scene>
+        <!--Agenda-->
+        <scene sceneID="PaL-fG-SeA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Agenda" id="KDb-zQ-zcS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDC-K8-vp9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="476"/>
+        </scene>
+        <!--ProjectList-->
+        <scene sceneID="SNa-ya-XXt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProjectList" referencedIdentifier="ProjectList" id="b4i-Sy-xPR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahu-ZU-CUS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="469"/>
         </scene>
     </scenes>
 </document>

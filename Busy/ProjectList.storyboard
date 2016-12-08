@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rzs-Kb-a5z">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,7 +82,61 @@
                                 <color key="textColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3Q-45-45r">
+                                <frame key="frameInset" minY="619" width="61" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="VLG-Vt-GT7" kind="show" id="xbg-9K-dQF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeO-rN-tQ7">
+                                <frame key="frameInset" minX="82" minY="620" width="57" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="kZj-Mg-fzG"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwp-0I-quF">
+                                <frame key="frameInset" minX="161" minY="620" width="53" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="dPG-f9-e4C" kind="show" id="Yft-Sq-vDW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ga-Mz-VNU">
+                                <frame key="frameInset" minX="235" minY="620" width="57" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="ZOL-MR-MrR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="npP-bL-cZv" kind="show" id="QSi-wk-r99"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ht3-w9-7Dg">
+                                <frame key="frameInset" minX="317" minY="619" width="58" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Sav-h5-oec" kind="show" id="wv0-6V-bGf"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="7ga-Mz-VNU" firstAttribute="baseline" secondItem="cwp-0I-quF" secondAttribute="firstBaseline" id="0jm-H5-xmX"/>
+                            <constraint firstItem="cwp-0I-quF" firstAttribute="baseline" secondItem="UeO-rN-tQ7" secondAttribute="firstBaseline" id="65a-Bf-HUD"/>
+                            <constraint firstItem="Ht3-w9-7Dg" firstAttribute="baseline" secondItem="O3Q-45-45r" secondAttribute="firstBaseline" id="6no-qH-ipu"/>
+                            <constraint firstItem="UeO-rN-tQ7" firstAttribute="top" secondItem="cwp-0I-quF" secondAttribute="top" id="76C-si-Kpb"/>
+                            <constraint firstItem="cwp-0I-quF" firstAttribute="leading" secondItem="UeO-rN-tQ7" secondAttribute="trailing" constant="22" id="83d-kS-BVZ"/>
+                            <constraint firstItem="O3Q-45-45r" firstAttribute="baseline" secondItem="Ht3-w9-7Dg" secondAttribute="firstBaseline" id="8wl-yf-0Va"/>
+                            <constraint firstItem="cwp-0I-quF" firstAttribute="top" secondItem="7ga-Mz-VNU" secondAttribute="top" id="AKz-xx-Faf"/>
+                            <constraint firstItem="O3Q-45-45r" firstAttribute="top" secondItem="Ht3-w9-7Dg" secondAttribute="top" id="Lxo-gP-ZN6"/>
+                            <constraint firstItem="cwp-0I-quF" firstAttribute="baseline" secondItem="7ga-Mz-VNU" secondAttribute="baseline" id="So0-ad-9LB"/>
+                            <constraint firstItem="cwp-0I-quF" firstAttribute="baseline" secondItem="7ga-Mz-VNU" secondAttribute="firstBaseline" id="V20-iO-61f"/>
+                            <constraint firstItem="UeO-rN-tQ7" firstAttribute="leading" secondItem="O3Q-45-45r" secondAttribute="trailing" constant="21" id="Ydn-uH-VIk"/>
+                            <constraint firstItem="UeO-rN-tQ7" firstAttribute="baseline" secondItem="cwp-0I-quF" secondAttribute="baseline" id="fxU-jD-eYZ"/>
+                            <constraint firstItem="7ga-Mz-VNU" firstAttribute="leading" secondItem="cwp-0I-quF" secondAttribute="trailing" constant="21" id="nuP-rs-YBp"/>
+                            <constraint firstItem="Ht3-w9-7Dg" firstAttribute="leading" secondItem="7ga-Mz-VNU" secondAttribute="trailing" constant="25" id="sQD-Y8-JSr"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="agendaTableView" destination="ULa-l0-228" id="idS-Ln-Uvp"/>
@@ -99,6 +155,38 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="46.326836581709152"/>
+        </scene>
+        <!--NewProjectTypes-->
+        <scene sceneID="HXp-6V-KBd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Jg-ec-FBl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="NewProjectTypes" id="dPG-f9-e4C" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="519"/>
+        </scene>
+        <!--UserProfile-->
+        <scene sceneID="vrj-f3-M4W">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Etl-gs-WZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="UserProfile" id="Sav-h5-oec" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="437"/>
+        </scene>
+        <!--Archive-->
+        <scene sceneID="fkN-Yt-Wee">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O7r-bS-ysP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Archive" referencedIdentifier="Archive" id="npP-bL-cZv" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="248" y="533"/>
+        </scene>
+        <!--Agenda-->
+        <scene sceneID="fMm-mS-AXU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Agenda" id="VLG-Vt-GT7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qiK-gz-2z8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="476"/>
         </scene>
     </scenes>
 </document>

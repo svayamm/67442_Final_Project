@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,14 +45,16 @@
                                             <frame key="frameInset" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Labels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whG-FT-Sm7">
-                                                    <frame key="frameInset" minX="16" minY="11" width="51" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whG-FT-Sm7">
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="whG-FT-Sm7" firstAttribute="leading" secondItem="rcO-wd-V3q" secondAttribute="leadingMargin" constant="8" id="nCv-bb-8VW"/>
+                                                <constraint firstItem="whG-FT-Sm7" firstAttribute="top" secondItem="rcO-wd-V3q" secondAttribute="topMargin" constant="3" id="pZx-q7-zpL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -108,15 +113,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZz-dR-Xnb">
-                                <frame key="frameInset" minY="617" width="73" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts3-Gd-LVN">
+                                <frame key="frameInset" minY="619" width="61" height="48"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="E9l-YY-XC9" kind="show" identifier="showAgenda" id="2fW-UH-OZ8"/>
+                                    <segue destination="CqO-nw-uHW" kind="show" id="HsM-tc-wtw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4r-xQ-GfA">
+                                <frame key="frameInset" minX="82" minY="620" width="57" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="xQt-fb-5ft"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="T8t-td-GOu" kind="show" id="s20-53-qgy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ca2-px-uQc">
+                                <frame key="frameInset" minX="161" minY="620" width="53" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="O0C-6H-DYy" kind="show" id="7MD-y4-Ud2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvV-F7-zrx">
+                                <frame key="frameInset" minX="235" minY="620" width="57" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="57" id="tDC-Oc-OBn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Icq-HV-41p" kind="show" id="HOE-kQ-BNh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EF-Hn-D9p">
+                                <frame key="frameInset" minX="317" minY="619" width="58" height="48"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="E4r-xQ-GfA" firstAttribute="baseline" secondItem="Ca2-px-uQc" secondAttribute="baseline" id="4ve-Ze-ECY"/>
+                            <constraint firstItem="TvV-F7-zrx" firstAttribute="baseline" secondItem="Ca2-px-uQc" secondAttribute="firstBaseline" id="81C-zu-DWJ"/>
+                            <constraint firstItem="E4r-xQ-GfA" firstAttribute="top" secondItem="Ca2-px-uQc" secondAttribute="top" id="9xF-OD-Ala"/>
+                            <constraint firstItem="Ca2-px-uQc" firstAttribute="baseline" secondItem="E4r-xQ-GfA" secondAttribute="firstBaseline" id="GaJ-kj-p4A"/>
+                            <constraint firstItem="5EF-Hn-D9p" firstAttribute="baseline" secondItem="Ts3-Gd-LVN" secondAttribute="firstBaseline" id="L7j-vC-Pkt"/>
+                            <constraint firstItem="TvV-F7-zrx" firstAttribute="leading" secondItem="Ca2-px-uQc" secondAttribute="trailing" constant="21" id="Tbw-20-2qj"/>
+                            <constraint firstItem="Ca2-px-uQc" firstAttribute="leading" secondItem="E4r-xQ-GfA" secondAttribute="trailing" constant="22" id="VCe-il-rFd"/>
+                            <constraint firstItem="5EF-Hn-D9p" firstAttribute="leading" secondItem="TvV-F7-zrx" secondAttribute="trailing" constant="25" id="YHS-eY-5F7"/>
+                            <constraint firstItem="Ca2-px-uQc" firstAttribute="top" secondItem="TvV-F7-zrx" secondAttribute="top" id="ZmN-5V-33V"/>
+                            <constraint firstItem="Ca2-px-uQc" firstAttribute="baseline" secondItem="TvV-F7-zrx" secondAttribute="baseline" id="khE-Ve-jd8"/>
+                            <constraint firstItem="E4r-xQ-GfA" firstAttribute="leading" secondItem="Ts3-Gd-LVN" secondAttribute="trailing" constant="21" id="laR-YQ-tiu"/>
+                            <constraint firstItem="Ca2-px-uQc" firstAttribute="baseline" secondItem="TvV-F7-zrx" secondAttribute="firstBaseline" id="r2Q-d6-YND"/>
+                            <constraint firstItem="Ts3-Gd-LVN" firstAttribute="baseline" secondItem="5EF-Hn-D9p" secondAttribute="firstBaseline" id="ueq-qI-F2G"/>
+                            <constraint firstItem="Ts3-Gd-LVN" firstAttribute="top" secondItem="5EF-Hn-D9p" secondAttribute="top" id="xyF-dk-1kS"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="agendaTableView" destination="K49-vr-HmJ" id="kaX-BB-Ihd"/>
@@ -136,13 +187,37 @@
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="46.326836581709152"/>
         </scene>
-        <!--Agenda-->
-        <scene sceneID="NcP-eu-xP3">
+        <!--NewProjectTypes-->
+        <scene sceneID="mAh-VR-XM7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Agenda" id="E9l-YY-XC9" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o9o-nT-zTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="NewProjectTypes" id="O0C-6H-DYy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mez-s0-5EQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="448"/>
+            <point key="canvasLocation" x="22" y="519"/>
+        </scene>
+        <!--Agenda-->
+        <scene sceneID="Zqf-X9-K9S">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Agenda" id="CqO-nw-uHW" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vog-Ws-yu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="476"/>
+        </scene>
+        <!--ProjectList-->
+        <scene sceneID="buq-eh-Ico">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProjectList" referencedIdentifier="ProjectList" id="T8t-td-GOu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1R8-dz-zCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="469"/>
+        </scene>
+        <!--Archive-->
+        <scene sceneID="0BD-VK-9Yi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Archive" referencedIdentifier="Archive" id="Icq-HV-41p" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dBo-wZ-MoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248" y="533"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zB9-96-DqJ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -156,7 +156,16 @@
         <!--Agenda-->
         <scene sceneID="TeP-1w-MX5">
             <objects>
-                <viewController storyboardIdentifier="Agenda" title="Agenda" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZcA-8f-5Y3" customClass="ViewController" customModule="Busy" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKg-TO-uOW" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="nVs-1v-fq7">
+                    <connections>
+                        <outlet property="delegate" destination="ZcA-8f-5Y3" id="msV-LM-NPf"/>
+                        <outlet property="searchContentsController" destination="ZcA-8f-5Y3" id="onl-yA-S6c"/>
+                        <outlet property="searchResultsDataSource" destination="ZcA-8f-5Y3" id="XcM-o2-03N"/>
+                        <outlet property="searchResultsDelegate" destination="ZcA-8f-5Y3" id="PWD-To-W9g"/>
+                    </connections>
+                </searchDisplayController>
+                <viewController storyboardIdentifier="Agend" title="Agenda" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZcA-8f-5Y3" customClass="ViewController" customModule="Busy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EWd-pd-KYO"/>
                         <viewControllerLayoutGuide type="bottom" id="I8V-cU-vB9"/>
@@ -232,15 +241,6 @@
                         <outlet property="timeframeSegment" destination="nGx-EB-xiJ" id="Z3E-de-bNo"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YKg-TO-uOW" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="nVs-1v-fq7">
-                    <connections>
-                        <outlet property="delegate" destination="ZcA-8f-5Y3" id="msV-LM-NPf"/>
-                        <outlet property="searchContentsController" destination="ZcA-8f-5Y3" id="onl-yA-S6c"/>
-                        <outlet property="searchResultsDataSource" destination="ZcA-8f-5Y3" id="XcM-o2-03N"/>
-                        <outlet property="searchResultsDelegate" destination="ZcA-8f-5Y3" id="PWD-To-W9g"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="284" y="851"/>
         </scene>
