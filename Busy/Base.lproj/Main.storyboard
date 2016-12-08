@@ -27,7 +27,7 @@
                                     <tabBarItem title="Projects" id="jTV-3g-utJ"/>
                                     <tabBarItem title="New" id="9cB-tc-IIz"/>
                                     <tabBarItem title="Archive" id="TvA-fl-TsX"/>
-                                    <tabBarItem title="Settings" id="3YM-Fx-GOj"/>
+                                    <tabBarItem title="Profile" id="3YM-Fx-GOj"/>
                                 </items>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="znW-BU-yJo">
