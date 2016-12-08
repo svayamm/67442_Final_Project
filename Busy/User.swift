@@ -13,7 +13,7 @@ struct User {
     let firebaseUID: String // Firebase provides a UID (well, technically Google does, upon authentication)
     var displayName: String
     var email: String
-    var projects: [Project] // Denormalising for easier access in Firebase's NoSQL database
+    var projects: [String] // Denormalising for easier access in Firebase's NoSQL database
     
     init(firebaseUID: String, displayName: String, email: String) {
         self.id = NSUUID.init() as UUID
@@ -23,8 +23,8 @@ struct User {
         self.projects = []
     }
     
-    mutating func addProject(project: Project) {
-        self.projects.append(project)
+    mutating func addProject(projectUUID: String) {
+        self.projects.append(projectUUID)
 }
     
 //    mutating func changeFirstName(firstName: String) {
