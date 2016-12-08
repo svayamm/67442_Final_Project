@@ -11,9 +11,9 @@ import Firebase
 
 class ViewController: UIViewController {
     
-    var userObject = User(firebaseUID: "", displayName: "", email: "")
+    var userObject: User?
     // this is the user object that will be used throughout the application henceforth
-
+    let rootRef = FIRDatabase.database().reference()
     
     @IBOutlet var test: UIButton!
     @IBOutlet var agendaTableView: UITableView!
@@ -26,19 +26,47 @@ class ViewController: UIViewController {
         //tabBar.selectedItem = (tabBar.items?[0])! as UITabBarItem;
     }
     
-    @IBAction func buttonPressed(_ sender: Any) {
-        print("button!!\n\n\n")
-        let alert = UIAlertController(title: "Testing userObject and FirebaseUser", message: generateMessage(), preferredStyle: .alert)
-        present(alert, animated: true, completion: nil)
-        alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
+    override func viewDidAppear(_ animated: Bool) {
+        let usersRef = rootRef.child("users")
+        // creating child node for 'users' directory in database
+        guard let userFUID = userObject?.firebaseUID else {print("userObject not set1"); return}
+        let idRef = usersRef.child(userFUID)
+        // create new node on 'users' directory, with user's FirebaseUID string as key
+        guard let userUUID = userObject?.id.uuidString else {print("userObject not set2"); return}
+        guard let userName = userObject?.displayName else {print("userObject not set3"); return}
+        guard let userEmail = userObject?.email else {print("userObject not set4"); return}
+        guard let userProjects = userObject?.projects else {print("userObject not set5"); return}
+        let userDict = ["id":userUUID,"firebaseUID": userFUID, "displayName": userName, "email": userEmail, "projects": userProjects ] as [String : Any]
+        // UUID converted to string as database cannot store type UUID
+        // dictionary of user info created, to be passed into database
+        idRef.updateChildValues(userDict, withCompletionBlock: {
+            (err, ref) in
+            
+            if err != nil {
+                print(err ?? "Error could not be cast as string")
+                return}
+            
+            print("Successfully saved user in FIR Database")
+        })
     }
     
-    func generateMessage() -> String {
-        //let userF = FIRAuth.auth()?.currentUser
-            let message = "User Object Details: \n  (\(userObject.displayName), \(userObject.email))>"
-            return message
-        }
-
+//    override func viewDidDisappear(_ animated: Bool) {
+//        <#code#>
+//    }
+    
+//    @IBAction func buttonPressed(_ sender: Any) {
+//        print("button!!\n\n\n")
+//        let alert = UIAlertController(title: "Testing userObject and FirebaseUser", message: generateMessage(), preferredStyle: .alert)
+//        present(alert, animated: true, completion: nil)
+//        alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
+//    }
+//    
+//    func generateMessage() -> String {
+//        //let userF = FIRAuth.auth()?.currentUser
+//            let message = "User Object Details: \n  (\(userObject.displayName), \(userObject.email))>"
+//            return message
+//        }
+//
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
