@@ -11,7 +11,10 @@ import UIKit
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var Title: UILabel!
     @IBOutlet weak var Summary: UILabel!
+    @IBOutlet weak var DueLabel: UILabel!
     @IBOutlet weak var Due: UILabel!
+    @IBOutlet weak var ForLabel: UILabel!
+    @IBOutlet weak var projtask: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

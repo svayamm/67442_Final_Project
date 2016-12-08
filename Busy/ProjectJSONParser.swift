@@ -11,6 +11,9 @@ import SwiftyJSON
 
 class ProjectJSONParser {
     
+    class func getData(){
+        
+    }
     
     class func parse(url: String){
         let theURL: NSURL = NSURL(string: url)!

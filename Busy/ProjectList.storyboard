@@ -6,43 +6,43 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Agenda-->
-        <scene sceneID="bSr-G0-5lM">
+        <!--Projects-->
+        <scene sceneID="E1x-Tw-Itr">
             <objects>
-                <viewController storyboardIdentifier="ProjectList" title="Agenda" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ifg-1f-gsg" customClass="ViewController" customModule="Busy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Agenda" title="Projects" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rzs-Kb-a5z" customClass="ViewController" customModule="Busy" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lBY-Fa-ICR"/>
-                        <viewControllerLayoutGuide type="bottom" id="m9C-43-7Nu"/>
+                        <viewControllerLayoutGuide type="top" id="T2W-Bs-hM9"/>
+                        <viewControllerLayoutGuide type="bottom" id="7nb-Te-2Ce"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mon-Pw-5Yf">
+                    <view key="view" contentMode="scaleToFill" id="B2B-No-BPl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDv-hm-9zb">
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frx-Z8-6fO">
                                 <frame key="frameInset" height="49" maxY="-1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Agenda" id="Wgt-WB-xwa"/>
-                                    <tabBarItem title="Projects" id="jks-LB-dVf"/>
-                                    <tabBarItem title="New" id="bzx-O4-4XG"/>
-                                    <tabBarItem title="Archive" id="YZn-Ps-jUE"/>
-                                    <tabBarItem title="Profile" id="Ppb-vu-IhS"/>
+                                    <tabBarItem title="Agenda" id="b8m-YV-ibn"/>
+                                    <tabBarItem title="Projects" id="pjq-xJ-D2y"/>
+                                    <tabBarItem title="New" id="kc2-Qh-C6J"/>
+                                    <tabBarItem title="Archive" id="t3K-Ar-aU3"/>
+                                    <tabBarItem title="Profile" id="5AW-lT-AjZ"/>
                                 </items>
                             </tabBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-YH-72W">
-                                <frame key="frameInset" minY="100" width="375" height="519"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ULa-l0-228">
+                                <frame key="frameInset" minY="65" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="46" id="2og-zf-RSh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="46" id="Rsj-Tr-6C3">
                                         <rect key="frame" x="0.0" y="28" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2og-zf-RSh" id="bZr-7O-fpB">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rsj-Tr-6C3" id="RqP-WP-PH0">
                                             <frame key="frameInset" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Labels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khM-mw-ENm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Labels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfe-lG-IJM">
                                                     <frame key="frameInset" minX="16" minY="11" width="51" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -54,20 +54,47 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="R62-EL-0Sc">
+                                <frame key="frameInset" height="44" maxY="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" id="Ppp-lw-SMF">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rlb-xG-91c">
+                                            <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="buttonPressed:" destination="rzs-Kb-a5z" eventType="touchUpInside" id="7Hi-GB-2kG"/>
+                                            </connections>
+                                        </button>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="rzs-Kb-a5z" id="6Av-nT-rpz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Projects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgZ-XM-DPS">
+                                <frame key="frameInset" minX="153" minY="28" width="70" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
+                                <color key="textColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="agendaTableView" destination="8Ay-YH-72W" id="lRL-8W-kDw"/>
-                        <outlet property="searchDisplayController" destination="huh-h8-fZo" id="Gbr-hG-0Pq"/>
+                        <outlet property="agendaTableView" destination="ULa-l0-228" id="idS-Ln-Uvp"/>
+                        <outlet property="searchDisplayController" destination="pf7-gk-UCa" id="lBJ-e6-TjP"/>
+                        <outlet property="test" destination="Rlb-xG-91c" id="sm9-dA-9Il"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bwF-gL-yjv" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="huh-h8-fZo">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fud-50-955" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="pf7-gk-UCa">
                     <connections>
-                        <outlet property="delegate" destination="Ifg-1f-gsg" id="oCo-yM-081"/>
-                        <outlet property="searchContentsController" destination="Ifg-1f-gsg" id="jb7-9p-wTp"/>
-                        <outlet property="searchResultsDataSource" destination="Ifg-1f-gsg" id="4b4-Zs-Pg7"/>
-                        <outlet property="searchResultsDelegate" destination="Ifg-1f-gsg" id="5Rv-Ry-07v"/>
+                        <outlet property="delegate" destination="rzs-Kb-a5z" id="Mup-lG-RQO"/>
+                        <outlet property="searchContentsController" destination="rzs-Kb-a5z" id="ZAn-eL-pil"/>
+                        <outlet property="searchResultsDataSource" destination="rzs-Kb-a5z" id="ubT-HL-uTe"/>
+                        <outlet property="searchResultsDelegate" destination="rzs-Kb-a5z" id="lNd-eg-n2O"/>
                     </connections>
                 </searchDisplayController>
             </objects>
