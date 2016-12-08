@@ -18,11 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet var test: UIButton!
     @IBOutlet var agendaTableView: UITableView!
     @IBOutlet var timeframeSegment: UISegmentedControl!
+    @IBOutlet var tabBar: UITabBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        //tabBar.selectedItem = (tabBar.items?[0])! as UITabBarItem;
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         alert.addAction(UIAlertAction(title: "Back", style: .default, handler: nil))
     }
-
+    
     func generateMessage() -> String {
         //let userF = FIRAuth.auth()?.currentUser
             let message = "User Object Details: \n  (\(userObject.displayName), \(userObject.email))>"
@@ -74,9 +75,9 @@ class ViewController: UIViewController {
 //        if segue.identifier == "showArchive" {
 //            let showArchive:ArchiveViewController = segue.destinationViewController as! ArchiveViewController
 //        }
-//        if segue.identifier == "showSettings" {
-//            let showSettings:SettingsViewController = segue.destinationViewController as! SettingsViewController
-//        }
+//        if segue.identifier == "showProfile" {
+ //           let showProfile:UserProfileViewController = segue.destination as! UserProfileViewController
+ //       }
     }
 }
 

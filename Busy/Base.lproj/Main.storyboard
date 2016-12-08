@@ -24,10 +24,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
                                     <tabBarItem title="Agenda" id="RWS-hw-tcS"/>
-                                    <tabBarItem title="Projects" id="jTV-3g-utJ"/>
-                                    <tabBarItem title="New" id="9cB-tc-IIz"/>
-                                    <tabBarItem title="Archive" id="TvA-fl-TsX"/>
-                                    <tabBarItem title="Profile" id="3YM-Fx-GOj"/>
+                                    <tabBarItem tag="1" title="Projects" id="jTV-3g-utJ"/>
+                                    <tabBarItem tag="2" title="New" id="9cB-tc-IIz"/>
+                                    <tabBarItem tag="3" title="Archive" id="TvA-fl-TsX"/>
+                                    <tabBarItem tag="4" title="Profile" id="3YM-Fx-GOj"/>
                                 </items>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="znW-BU-yJo">
@@ -91,11 +91,40 @@
                                 <color key="textColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3a-Ya-sBt">
+                                <frame key="frameInset" minY="619" width="68" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSf-sw-6Ci">
+                                <frame key="frameInset" minX="82" minY="620" width="68" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPX-Vx-NNG">
+                                <frame key="frameInset" minX="153" minY="620" width="68" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxb-u5-38Y">
+                                <frame key="frameInset" minX="229" minY="620" width="68" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0h-rk-wSq">
+                                <frame key="frameInset" minX="307" minY="619" width="68" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="fpg-OT-hjX" kind="show" identifier="showProfile" id="PEl-m0-ZMG"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="agendaTableView" destination="znW-BU-yJo" id="7wJ-vF-g0d"/>
                         <outlet property="searchDisplayController" destination="Wh8-NT-Tji" id="Pdi-DF-7QK"/>
+                        <outlet property="tabBar" destination="jiE-Xo-4fw" id="3cQ-nx-Hlh"/>
                         <outlet property="test" destination="7fF-HW-gRn" id="REq-2O-Q1n"/>
                         <outlet property="timeframeSegment" destination="EjC-Pk-NC4" id="SmQ-bK-hVC"/>
                     </connections>
@@ -111,6 +140,14 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="21.600000000000001" y="46.326836581709152"/>
+        </scene>
+        <!--UserProfile-->
+        <scene sceneID="HZT-L6-X2V">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserProfile" id="fpg-OT-hjX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ax6-I5-IbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="437"/>
         </scene>
     </scenes>
 </document>
