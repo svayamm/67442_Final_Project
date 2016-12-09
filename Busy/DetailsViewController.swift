@@ -12,11 +12,11 @@ import UIKit
 import Firebase
 
 class DetailsViewController: UIViewController {
-    
+    var projectTitle: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        print(projectTitle)
     }
     
     
