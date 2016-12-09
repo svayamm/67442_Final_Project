@@ -26,7 +26,7 @@
 		A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F21DD966EB004C6AAF /* NewViewController.swift */; };
 		A465E9CE1DF5F3C500C40CF2 /* ProjectList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465E9CD1DF5F3C500C40CF2 /* ProjectList.storyboard */; };
 		A465E9D01DF5F40100C40CF2 /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465E9CF1DF5F40100C40CF2 /* ProjectDetail.storyboard */; };
-		A465E9D41DF7B67D00C40CF2 /* UserJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465E9D31DF7B67D00C40CF2 /* UserJSONParser.swift */; };
+		A465E9D41DF7B67D00C40CF2 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465E9D31DF7B67D00C40CF2 /* UserParser.swift */; };
 		A47584021DF5BFB800C36AE4 /* NewTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47584011DF5BFB800C36AE4 /* NewTypesViewController.swift */; };
 		A4C98A581DEB9345007BA672 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C98A571DEB9345007BA672 /* SignIn.storyboard */; };
 		A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C98A591DEB9362007BA672 /* SignInViewController.swift */; };
@@ -37,9 +37,9 @@
 		CB53D1B31DE76CE000AEEFAC /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B21DE76CE000AEEFAC /* Assignment.swift */; };
 		CB53D1B71DE76D8900AEEFAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B61DE76D8900AEEFAC /* User.swift */; };
 		CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B81DE76DA500AEEFAC /* Task.swift */; };
-		CB5CFB231DF896E100FFE8FA /* ProjectJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB221DF896E100FFE8FA /* ProjectJSONParser.swift */; };
-		CB5CFB251DF896ED00FFE8FA /* TaskJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB241DF896ED00FFE8FA /* TaskJSONParser.swift */; };
-		CB5CFB271DF896F700FFE8FA /* AssignmentJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB261DF896F700FFE8FA /* AssignmentJSONParser.swift */; };
+		CB5CFB231DF896E100FFE8FA /* ProjectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB221DF896E100FFE8FA /* ProjectParser.swift */; };
+		CB5CFB251DF896ED00FFE8FA /* TaskParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB241DF896ED00FFE8FA /* TaskParser.swift */; };
+		CB5CFB271DF896F700FFE8FA /* AssignmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB261DF896F700FFE8FA /* AssignmentParser.swift */; };
 		CB5CFB2A1DF8A83A00FFE8FA /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB291DF8A83A00FFE8FA /* ArchiveViewController.swift */; };
 		CB5CFB2C1DF8A89B00FFE8FA /* Archive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5CFB2B1DF8A89B00FFE8FA /* Archive.storyboard */; };
 		CB5CFB311DF8AA3000FFE8FA /* ArProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB2F1DF8AA3000FFE8FA /* ArProjectTableViewCell.swift */; };
@@ -97,7 +97,7 @@
 		A430D7F21DD966EB004C6AAF /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		A465E9CD1DF5F3C500C40CF2 /* ProjectList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectList.storyboard; sourceTree = "<group>"; };
 		A465E9CF1DF5F40100C40CF2 /* ProjectDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectDetail.storyboard; sourceTree = "<group>"; };
-		A465E9D31DF7B67D00C40CF2 /* UserJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserJSONParser.swift; sourceTree = "<group>"; };
+		A465E9D31DF7B67D00C40CF2 /* UserParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
 		A47584011DF5BFB800C36AE4 /* NewTypesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTypesViewController.swift; sourceTree = "<group>"; };
 		A4C98A571DEB9345007BA672 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		A4C98A591DEB9362007BA672 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -109,9 +109,9 @@
 		CB53D1B21DE76CE000AEEFAC /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		CB53D1B61DE76D8900AEEFAC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CB53D1B81DE76DA500AEEFAC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		CB5CFB221DF896E100FFE8FA /* ProjectJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectJSONParser.swift; sourceTree = "<group>"; };
-		CB5CFB241DF896ED00FFE8FA /* TaskJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskJSONParser.swift; sourceTree = "<group>"; };
-		CB5CFB261DF896F700FFE8FA /* AssignmentJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentJSONParser.swift; sourceTree = "<group>"; };
+		CB5CFB221DF896E100FFE8FA /* ProjectParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectParser.swift; sourceTree = "<group>"; };
+		CB5CFB241DF896ED00FFE8FA /* TaskParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskParser.swift; sourceTree = "<group>"; };
+		CB5CFB261DF896F700FFE8FA /* AssignmentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentParser.swift; sourceTree = "<group>"; };
 		CB5CFB291DF8A83A00FFE8FA /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		CB5CFB2B1DF8A89B00FFE8FA /* Archive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Archive.storyboard; sourceTree = "<group>"; };
 		CB5CFB2F1DF8AA3000FFE8FA /* ArProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArProjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -264,10 +264,10 @@
 		A465E9D11DF73F4800C40CF2 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				A465E9D31DF7B67D00C40CF2 /* UserJSONParser.swift */,
-				CB5CFB221DF896E100FFE8FA /* ProjectJSONParser.swift */,
-				CB5CFB241DF896ED00FFE8FA /* TaskJSONParser.swift */,
-				CB5CFB261DF896F700FFE8FA /* AssignmentJSONParser.swift */,
+				A465E9D31DF7B67D00C40CF2 /* UserParser.swift */,
+				CB5CFB221DF896E100FFE8FA /* ProjectParser.swift */,
+				CB5CFB241DF896ED00FFE8FA /* TaskParser.swift */,
+				CB5CFB261DF896F700FFE8FA /* AssignmentParser.swift */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -634,14 +634,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB5CFB311DF8AA3000FFE8FA /* ArProjectTableViewCell.swift in Sources */,
-				CB5CFB231DF896E100FFE8FA /* ProjectJSONParser.swift in Sources */,
-				CB5CFB271DF896F700FFE8FA /* AssignmentJSONParser.swift in Sources */,
+				CB5CFB231DF896E100FFE8FA /* ProjectParser.swift in Sources */,
+				CB5CFB271DF896F700FFE8FA /* AssignmentParser.swift in Sources */,
 				A4F0D3DA1DF3B4590056E3E3 /* TableViewCell.swift in Sources */,
 				CB5CFB3C1DF8B5B800FFE8FA /* UserProfileViewController.swift in Sources */,
 				A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */,
-				CB5CFB251DF896ED00FFE8FA /* TaskJSONParser.swift in Sources */,
+				CB5CFB251DF896ED00FFE8FA /* TaskParser.swift in Sources */,
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
-				A465E9D41DF7B67D00C40CF2 /* UserJSONParser.swift in Sources */,
+				A465E9D41DF7B67D00C40CF2 /* UserParser.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
 				CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */,
 				A430D7B41DD89015004C6AAF /* AppDelegate.swift in Sources */,
