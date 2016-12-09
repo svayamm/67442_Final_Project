@@ -117,11 +117,21 @@ class NewFormViewController: FormViewController {
 //        guard let description = filledForm["description"] else {print("Form field not set: description"); return}
 //        guard let projectDeadline = filledForm["deadline"] else {print("Form field not set: deadline"); return}
 //        guard let repoLink = filledForm["repo"] else {print("Form field not set: repo"); return}
+        // Auto-generated values
+        let UUID = NSUUID.init().uuidString
+        let projectType = "solo"
+        var adminList = [] as [String] // add user FUID
+        adminList.append(currentFUID!)
+        var userList = [] as [[String]]
+        userList.append(adminList)
+        var assignments = [] as [String] // add assignment UUIDstring
+        var tasks = [] as [String]
+        // User-generated values
         let projectTitle = filledForm["title"]
         let description = filledForm["description"]
         let projectDeadline = filledForm["deadline"]?.dateFormat
         let repoLink = filledForm["repo"]
-        let soloProjectDict = ["projectTitle":projectTitle,"description": description, "projectDeadline": projectDeadline, "repoLink": repoLink ] as [String : Any]
+        let soloProjectDict = ["projectTitle":projectTitle,"description": description, "projectDeadline": projectDeadline, "repoLink": repoLink, "id": UUID, "type":projectType, "users":userList, "assignments":assignments, "tasks":tasks ] as [String : Any]
         // dictionary of project info created, to be passed into database
         return soloProjectDict
     }
@@ -132,7 +142,8 @@ class NewFormViewController: FormViewController {
             if let destinationVC = segue.destination as?  DetailsViewController {
                 // INCLUDE OTHER MODEL PROPERTIES; TRIAL ONLY
                 let dict = self.createSoloProject()
-                let userProjectsRef = FIRDatabase.database().reference().child("projects").child(currentFUID!)
+                let projectID = dict["id"] as! String
+                let userProjectsRef = FIRDatabase.database().reference().child("projects").child(currentFUID!).child(projectID)
                 userProjectsRef.updateChildValues(dict, withCompletionBlock: {
                     (err, ref) in
                     
@@ -142,8 +153,7 @@ class NewFormViewController: FormViewController {
                     
                     print("Successfully saved solo project in FIR Database")
                 })
-                destinationVC.projectTitle = self.form.formValues()["title"] as! String
-                
+                destinationVC.projectUUID = projectID
             }
         }
     }
