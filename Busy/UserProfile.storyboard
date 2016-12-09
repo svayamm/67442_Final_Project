@@ -21,6 +21,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lw-sw-09N">
+                                <frame key="frameInset" height="44" maxY="603"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Logout" id="ucn-34-VqO"/>
+                                </items>
+                            </toolbar>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4u4-hB-xHU">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
@@ -56,24 +63,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="rP1-5Y-BhI">
-                                <frame key="frameInset" height="44" maxY="603"/>
-                                <items>
-                                    <barButtonItem style="plain" id="Nlg-WW-556">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U3y-Qc-Aw9">
-                                            <rect key="frame" x="16" y="7" width="48" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Logout"/>
-                                            <connections>
-                                                <action selector="buttonPressed:" destination="sHk-Xq-7aa" eventType="touchUpInside" id="ByE-Jq-vSX"/>
-                                            </connections>
-                                        </button>
-                                        <connections>
-                                            <action selector="buttonPressed:" destination="sHk-Xq-7aa" id="qpw-X1-3aq"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMZ-P9-fg4">
                                 <frame key="frameInset" minX="137" minY="28" width="101" height="29"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="19"/>
@@ -168,9 +157,7 @@
                             <constraint firstItem="Ts3-Gd-LVN" firstAttribute="leading" secondItem="4u4-hB-xHU" secondAttribute="leading" id="Vi3-wU-ija"/>
                             <constraint firstItem="Ca2-px-uQc" firstAttribute="baseline" secondItem="TvV-F7-zrx" secondAttribute="firstBaseline" id="Xty-SA-TOc"/>
                             <constraint firstItem="TvV-F7-zrx" firstAttribute="baseline" secondItem="Ca2-px-uQc" secondAttribute="firstBaseline" id="Y03-7y-u5n"/>
-                            <constraint firstItem="5EF-Hn-D9p" firstAttribute="trailing" secondItem="rP1-5Y-BhI" secondAttribute="trailing" id="YS5-pJ-tho"/>
                             <constraint firstItem="5EF-Hn-D9p" firstAttribute="top" secondItem="K49-vr-HmJ" secondAttribute="bottom" id="a3R-ax-SaV"/>
-                            <constraint firstItem="Ts3-Gd-LVN" firstAttribute="leading" secondItem="rP1-5Y-BhI" secondAttribute="leading" id="dDO-c1-9Dz"/>
                             <constraint firstItem="E4r-xQ-GfA" firstAttribute="bottom" secondItem="4u4-hB-xHU" secondAttribute="bottom" id="e4h-rI-L5e"/>
                             <constraint firstItem="Ts3-Gd-LVN" firstAttribute="top" secondItem="K49-vr-HmJ" secondAttribute="bottom" id="fuH-uc-skZ"/>
                             <constraint firstItem="E4r-xQ-GfA" firstAttribute="leading" secondItem="Ts3-Gd-LVN" secondAttribute="trailing" constant="21" id="hG4-4e-101"/>
@@ -181,7 +168,6 @@
                     <connections>
                         <outlet property="agendaTableView" destination="K49-vr-HmJ" id="kaX-BB-Ihd"/>
                         <outlet property="searchDisplayController" destination="x6K-Pq-Vo2" id="nn5-eq-g1Y"/>
-                        <outlet property="test" destination="U3y-Qc-Aw9" id="Dws-Mx-GmZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsn-Om-3Et" sceneMemberID="firstResponder"/>
