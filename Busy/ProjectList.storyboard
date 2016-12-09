@@ -9,6 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Storyboard Reference-->
+        <scene sceneID="JSk-Wb-G8j">
+            <objects>
+                <viewControllerPlaceholder id="620-pb-Eue" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8p-bX-eV3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="-347"/>
+        </scene>
         <!--Projects-->
         <scene sceneID="E1x-Tw-Itr">
             <objects>
@@ -52,6 +60,9 @@
                                                 <constraint firstItem="Mfe-lG-IJM" firstAttribute="top" secondItem="RqP-WP-PH0" secondAttribute="topMargin" constant="3" id="bqS-s0-EGd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="620-pb-Eue" kind="showDetail" id="Fz2-hm-t7Z"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
