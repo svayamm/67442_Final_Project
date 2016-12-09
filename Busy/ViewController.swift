@@ -75,21 +75,21 @@ class ViewController: UIViewController {
     
     // MARK: - Segmented Control
     
-    //for the segmented control on top
-//    @IBAction func indexChanged(sender:UISegmentedControl)
-//    {
-//        switch segmentedControl.selectedSegmentIndex
-//        {
-//        case 0:
-//            print("Today selected");
-//        case 1:
-//            print("This Week selected");
-//        case 2:
-//            print("All Items selected");
-//        default:
-//            break;
-//        }
-//    }
+    // for the segmented control on top
+    @IBAction func indexChanged(sender:UISegmentedControl)
+    {
+        switch timeframeSegment.selectedSegmentIndex
+        {
+        case 0:
+            print("Today selected");
+        case 1:
+            print("This Week selected");
+        case 2:
+            print("All Items selected");
+        default:
+            break;
+        }
+    }
     
     // MARK: - Agenda Page Segues
     //For the bottom toolbar, commented out since not hooked up to anything yet

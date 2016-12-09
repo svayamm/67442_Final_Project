@@ -40,6 +40,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
                 // create a new user object (different variable name to differentiate from 'user' used above
                 // This user object will be used internally, passed through the view controllers
                 destinationVC.userObject = userObj
+                
             }
         }
     }

@@ -183,7 +183,6 @@
 		A430D7B21DD89015004C6AAF /* Busy */ = {
 			isa = PBXGroup;
 			children = (
-				CB5CFB281DF8A7E700FFE8FA /* 'Archive' Tab */,
 				A430D7B31DD89015004C6AAF /* AppDelegate.swift */,
 				A430D7BD1DD89016004C6AAF /* Assets.xcassets */,
 				A430D7BF1DD89016004C6AAF /* LaunchScreen.storyboard */,
@@ -196,6 +195,7 @@
 				A430D7F51DD96703004C6AAF /* 'New' Tab */,
 				A430D7F71DD96730004C6AAF /* 'List of Projects' Tab */,
 				A430D7F61DD9671F004C6AAF /* Individual Project Detail */,
+				CB5CFB281DF8A7E700FFE8FA /* 'Archive' Tab */,
 				A465E9D61DF8189C00C40CF2 /* 'User Profile' tab */,
 			);
 			path = Busy;
