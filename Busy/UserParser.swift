@@ -20,7 +20,9 @@ class UserParser {
 
     }
     
-    func updateSingleAttribute(attribute: String)
+    func updateSingleAttribute(attribute: String) {
+        
+    }
     
 //    class func parse(url: String){
 //        let theURL: NSURL = NSURL(string: url)!
