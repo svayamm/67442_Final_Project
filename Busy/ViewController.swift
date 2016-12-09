@@ -50,8 +50,21 @@ class ViewController: UIViewController {
         })
     }
     
+    @IBAction func indexChanged(sender:UISegmentedControl) {
+        switch timeframeSegment.selectedSegmentIndex {
+            case 0:
+                print("first")
+            case 1:
+                print("second")
+            case 2:
+                print("third")
+            default:
+                break;
+        }
+    }
+    
 //    override func viewDidDisappear(_ animated: Bool) {
-//        <#code#>
+//
 //    }
     
 //    @IBAction func buttonPressed(_ sender: Any) {
