@@ -70,9 +70,12 @@ class NewFormViewController: FormViewController {
         
         var row = FormRowDescriptor(tag: Static.nameTag, type: .text, title: "Project Title")
         row.configuration.cell.appearance = ["textField.placeholder" : "Project Name" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.appearance = ["textField.placeholder" : placeholder() as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.required = true
         section1.rows.append(row)
         
         row = FormRowDescriptor(tag: Static.textView, type: .multilineText, title: "Description")
+        row.configuration.cell.required = true
         section1.rows.append(row)
         
         let section2 = FormSectionDescriptor(headerTitle: "Optional input:", footerTitle: nil)
@@ -97,5 +100,9 @@ class NewFormViewController: FormViewController {
         form.sections = [section1, section2, section3]
         
         self.form = form
+    }
+    
+    func placeholder() -> String {
+        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ipsum ligula, finibus eget risus in, lacinia fermentum ligula. Aenean id ultricies dolor. Sed venenatis magna eu est tempus rhoncus at eu augue."
     }
 }

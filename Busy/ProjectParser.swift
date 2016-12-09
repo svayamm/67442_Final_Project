@@ -15,14 +15,14 @@ class ProjectParser {
         
     }
     
-//    class func parse(url: String){
-//        let theURL: NSURL = NSURL(string: url)!
-//        
-//        let data = NSData(contentsOf: theURL as URL)!
-//        let swiftyjson = JSON(data: data as Data)
-//        
-//        //        if let owner_login = swiftyjson["items"][0]["owner"]["login"].string {
-//        //            print(owner_login)
-//        //        }
+//    let userProjectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
+//    
+//    userProjectsRef.observeSingleEvent(of: .value, with: { (snapshot) in
+//    print(snapshot.childrenCount)
+//    for project in snapshot.children {
+//    for attribute in (project as AnyObject).children.allObjects as! [FIRDataSnapshot] {
+//    print(attribute.key, attribute.value)
 //    }
+//    }
+//    })
 }
