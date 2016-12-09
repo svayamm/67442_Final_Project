@@ -40,19 +40,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
                 // create a new user object (different variable name to differentiate from 'user' used above
                 // This user object will be used internally, passed through the view controllers
                 destinationVC.userObject = userObj
-                let userProjectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
                 
-                userProjectsRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                    print(snapshot.childrenCount)
-                    for project in snapshot.children {
-                        for attribute in (project as AnyObject).children.allObjects as! [FIRDataSnapshot] {
-                            if attribute.key == "attribute1" {
-                                print("\nYO DAWG")
-                            } else {print("\nKey 2 bitch")}
-                            print(attribute.key, attribute.value)
-                        }
-                    }
-                })
             }
         }
     }
