@@ -124,14 +124,19 @@ class NewFormViewController: FormViewController {
         adminList.append(currentFUID!)
         var userList = [] as [[String]]
         userList.append(adminList)
+        var complete = 0
         var assignments = [] as [String] // add assignment UUIDstring
         var tasks = [] as [String]
         // User-generated values
         let projectTitle = filledForm["title"]
         let description = filledForm["description"]
-        let projectDeadline = filledForm["deadline"]?.dateFormat
+        // converting NSDate to String
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.full
+        var convertedDate = dateFormatter.string(from: filledForm["deadline"] as! Date)
+        let projectDeadline = convertedDate
         let repoLink = filledForm["repo"]
-        let soloProjectDict = ["projectTitle":projectTitle,"description": description, "projectDeadline": projectDeadline, "repoLink": repoLink, "id": UUID, "type":projectType, "users":userList, "assignments":assignments, "tasks":tasks ] as [String : Any]
+        let soloProjectDict = ["projectTitle":projectTitle,"description": description, "projectDeadline": projectDeadline, "repoLink": repoLink, "id": UUID, "type":projectType, "users":userList, "assignments":assignments, "tasks":tasks, "complete":complete] as [String : Any]
         // dictionary of project info created, to be passed into database
         return soloProjectDict
     }
