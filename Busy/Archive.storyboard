@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Agenda-->
+        <!--Archive-->
         <scene sceneID="Ylc-Aq-kQO">
             <objects>
-                <viewController storyboardIdentifier="Archive" title="Agenda" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VJQ-zT-kAf" customClass="ViewController" customModule="Busy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Archive" title="Archive" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VJQ-zT-kAf" customClass="ViewController" customModule="Busy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TQ4-ur-bdx"/>
                         <viewControllerLayoutGuide type="bottom" id="9Bg-XY-hl8"/>
@@ -59,9 +59,9 @@
                                 <items>
                                     <barButtonItem style="plain" id="V8o-7X-mgr">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y5p-SC-o7n">
-                                            <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                            <rect key="frame" x="16" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title=" "/>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="VJQ-zT-kAf" eventType="touchUpInside" id="jR1-0u-YPM"/>
                                             </connections>
@@ -154,7 +154,6 @@
                     <connections>
                         <outlet property="agendaTableView" destination="bqb-bj-lCh" id="lo1-C7-Yl3"/>
                         <outlet property="searchDisplayController" destination="Mzg-5m-sZB" id="JFt-73-n74"/>
-                        <outlet property="test" destination="y5p-SC-o7n" id="NF0-82-8Lu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcB-Bb-Dwm" sceneMemberID="firstResponder"/>

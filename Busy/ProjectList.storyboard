@@ -70,9 +70,9 @@
                                 <items>
                                     <barButtonItem style="plain" id="Ppp-lw-SMF">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rlb-xG-91c">
-                                            <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                            <rect key="frame" x="16" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title=" "/>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="rzs-Kb-a5z" eventType="touchUpInside" id="7Hi-GB-2kG"/>
                                             </connections>
@@ -165,7 +165,6 @@
                     <connections>
                         <outlet property="agendaTableView" destination="ULa-l0-228" id="idS-Ln-Uvp"/>
                         <outlet property="searchDisplayController" destination="pf7-gk-UCa" id="lBJ-e6-TjP"/>
-                        <outlet property="test" destination="Rlb-xG-91c" id="sm9-dA-9Il"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fud-50-955" sceneMemberID="firstResponder"/>

@@ -92,9 +92,9 @@
                                 <items>
                                     <barButtonItem style="plain" id="b73-za-JHT">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y4y-Xq-cKH">
-                                            <rect key="frame" x="16" y="7" width="46" height="30"/>
+                                            <rect key="frame" x="16" y="7" width="48" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                            <state key="normal" title="Logout"/>
                                             <connections>
                                                 <action selector="buttonPressed:" destination="vh0-xB-DGY" eventType="touchUpInside" id="F33-gg-1ES"/>
                                             </connections>
@@ -194,7 +194,6 @@
                     <connections>
                         <outlet property="agendaTableView" destination="gBv-tJ-Dhe" id="AUK-Up-cya"/>
                         <outlet property="searchDisplayController" destination="5Ei-Np-jOw" id="zfr-cI-ysf"/>
-                        <outlet property="test" destination="y4y-Xq-cKH" id="QlI-O3-l7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6y-3f-1Vc" sceneMemberID="firstResponder"/>
