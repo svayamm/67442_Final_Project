@@ -41,7 +41,7 @@
         <scene sceneID="IiH-8k-VNI">
             <objects>
                 <navigationController storyboardIdentifier="NewPForm" title="NewForm" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pts-xN-YCj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bCH-LT-BSA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bCH-LT-BSA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -127,11 +127,11 @@
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJk-RA-iWY">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Agenda" id="aMg-Mf-Wtm"/>
-                                    <tabBarItem title="Projects" id="BU2-0T-SCa"/>
-                                    <tabBarItem title="New" id="oPn-hr-ZlK"/>
-                                    <tabBarItem title="Archive" id="PoR-o8-JeN"/>
-                                    <tabBarItem title="Profile" id="GLl-Mg-S1y"/>
+                                    <tabBarItem title="Agenda" image="agendaTab" id="aMg-Mf-Wtm"/>
+                                    <tabBarItem title="Projects" image="projectsTab" id="BU2-0T-SCa"/>
+                                    <tabBarItem title="New" image="newTab" id="oPn-hr-ZlK"/>
+                                    <tabBarItem title="Archive" image="archiveTab" id="PoR-o8-JeN"/>
+                                    <tabBarItem title="Profile" image="userProfileTab" id="GLl-Mg-S1y"/>
                                 </items>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeZ-gD-luA">
@@ -265,4 +265,11 @@
             <point key="canvasLocation" x="176" y="606"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="agendaTab" width="25" height="25"/>
+        <image name="archiveTab" width="25" height="25"/>
+        <image name="newTab" width="25" height="25"/>
+        <image name="projectsTab" width="25" height="25"/>
+        <image name="userProfileTab" width="25" height="25"/>
+    </resources>
 </document>

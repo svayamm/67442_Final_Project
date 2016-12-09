@@ -32,11 +32,11 @@
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frx-Z8-6fO">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Agenda" id="b8m-YV-ibn"/>
-                                    <tabBarItem title="Projects" id="pjq-xJ-D2y"/>
-                                    <tabBarItem title="New" id="kc2-Qh-C6J"/>
-                                    <tabBarItem title="Archive" id="t3K-Ar-aU3"/>
-                                    <tabBarItem title="Profile" id="5AW-lT-AjZ"/>
+                                    <tabBarItem title="Agenda" image="agendaTab" id="b8m-YV-ibn"/>
+                                    <tabBarItem title="Projects" image="projectsTab" id="pjq-xJ-D2y"/>
+                                    <tabBarItem title="New" image="newTab" id="kc2-Qh-C6J"/>
+                                    <tabBarItem title="Archive" image="archiveTab" id="t3K-Ar-aU3"/>
+                                    <tabBarItem title="Profile" image="userProfileTab" id="5AW-lT-AjZ"/>
                                 </items>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ULa-l0-228">
@@ -213,4 +213,11 @@
             <point key="canvasLocation" x="-323" y="476"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="agendaTab" width="25" height="25"/>
+        <image name="archiveTab" width="25" height="25"/>
+        <image name="newTab" width="25" height="25"/>
+        <image name="projectsTab" width="25" height="25"/>
+        <image name="userProfileTab" width="25" height="25"/>
+    </resources>
 </document>

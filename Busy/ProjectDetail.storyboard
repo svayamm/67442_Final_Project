@@ -24,11 +24,11 @@
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XI0-0e-Log">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Agenda" id="OaZ-yS-Qfv"/>
-                                    <tabBarItem title="Projects" id="dgB-IE-W9W"/>
-                                    <tabBarItem title="New" id="ynd-ZL-3bL"/>
-                                    <tabBarItem title="Archive" id="HRo-2O-kuL"/>
-                                    <tabBarItem title="Profile" id="Gjz-vv-fiA"/>
+                                    <tabBarItem title="Agenda" image="agendaTab" id="OaZ-yS-Qfv"/>
+                                    <tabBarItem title="Projects" image="projectsTab" id="dgB-IE-W9W"/>
+                                    <tabBarItem title="New" image="newTab" id="ynd-ZL-3bL"/>
+                                    <tabBarItem title="Archive" image="archiveTab" id="HRo-2O-kuL"/>
+                                    <tabBarItem title="Profile" image="userProfileTab" id="Gjz-vv-fiA"/>
                                 </items>
                             </tabBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="6fK-Mg-ihd">
@@ -182,6 +182,10 @@
         <scene sceneID="24T-Hv-kp3">
             <objects>
                 <viewController id="Hd3-PE-QAd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H4A-Si-VW0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mft-8G-MBe"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PzD-KH-bYo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -286,4 +290,11 @@
             <point key="canvasLocation" x="978" y="377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="agendaTab" width="25" height="25"/>
+        <image name="archiveTab" width="25" height="25"/>
+        <image name="newTab" width="25" height="25"/>
+        <image name="projectsTab" width="25" height="25"/>
+        <image name="userProfileTab" width="25" height="25"/>
+    </resources>
 </document>
