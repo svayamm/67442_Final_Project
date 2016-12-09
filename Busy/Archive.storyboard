@@ -24,11 +24,11 @@
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0J-K4-6ky">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem title="Agenda" id="cPS-jn-ueE"/>
-                                    <tabBarItem title="Projects" id="9EY-RF-QaE"/>
-                                    <tabBarItem title="New" id="uzT-7y-lM9"/>
-                                    <tabBarItem title="Archive" id="ZAc-i5-2CM"/>
-                                    <tabBarItem title="Settings" id="day-K8-Epi"/>
+                                    <tabBarItem title="Agenda" image="agendaTab" id="cPS-jn-ueE"/>
+                                    <tabBarItem title="Projects" image="projectsTab" id="9EY-RF-QaE"/>
+                                    <tabBarItem title="New" image="newTab" id="uzT-7y-lM9"/>
+                                    <tabBarItem title="Archive" image="archiveTab" id="ZAc-i5-2CM"/>
+                                    <tabBarItem title="Profile" image="userProfileTab" id="day-K8-Epi"/>
                                 </items>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bqb-bj-lCh">
@@ -202,4 +202,11 @@
             <point key="canvasLocation" x="-114" y="469"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="agendaTab" width="25" height="25"/>
+        <image name="archiveTab" width="25" height="25"/>
+        <image name="newTab" width="25" height="25"/>
+        <image name="projectsTab" width="25" height="25"/>
+        <image name="userProfileTab" width="25" height="25"/>
+    </resources>
 </document>
