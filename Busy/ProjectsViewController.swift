@@ -16,14 +16,25 @@ import UIKit
 import Firebase
 
 class ProjectsViewController: UIViewController {
+    let projectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
+    var projectList = [String:AnyObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
-    
-    
+    override func viewDidAppear(_ animated: Bool) {
+        projectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
+            // snapshot.children = all projects listed under FUID
+            self.projectList.removeAll()
+            let projList = snapshot.value as? [String : AnyObject] ?? [:]
+            self.projectList = projList
+//            for project in snapshot.value as? Dictionary {
+//                self.projectList.append(project)
+//            }
+        })
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
