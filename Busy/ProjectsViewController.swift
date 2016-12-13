@@ -25,14 +25,15 @@ class ProjectsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "projectListCell")
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.projectList.count;
     }
     func parseProjectList(){
-        
+        print("pls")
         for project in projectList{
+            print("proj")
             let title = project.value["projectTitle"] as! String
             titleAsKey[title] = project.value as? [String : AnyObject]
             let sortedTitles = Array(titleAsKey.keys).sorted(by: <)
@@ -45,14 +46,14 @@ class ProjectsViewController: UIViewController {
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //var cell:UITableViewCell = (self.tableView?.dequeueReusableCell(withIdentifier: "cell"))! as UITableViewCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! ProjectTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectListCell", for: indexPath as IndexPath) as! ProjectTableViewCell
         let projName = titleIndex[indexPath.row]
         let projectAttributes = titleAsKey[projName]! as [String:AnyObject]
         let deadlineString = projectAttributes["projectDeadline"] as! String
 
         // probably ought to format the date string nicely
         
-        cell.Due.text = deadlineString
+        //cell.Due.text = deadlineString
         cell.Title.text = projectAttributes["projectTitle"] as! String
         //cell.taskCount = proj.tasks.count
         //cell.textLabel?.text = self.projectList[indexPath.row]
@@ -63,15 +64,19 @@ class ProjectsViewController: UIViewController {
         print("You selected cell #\(indexPath.row)!")
     }
     override func viewDidAppear(_ animated: Bool) {
+        print("hello")
         projectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
             // snapshot.children = all projects listed under FUID
             self.projectList.removeAll()
             let projList = snapshot.value as? [String : AnyObject] ?? [:]
             self.projectList = projList
+            print("world")
 //            for project in snapshot.value as? Dictionary {
 //                self.projectList.append(project)
 //            }
         })
+        parseProjectList()
+        self.tableView?.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

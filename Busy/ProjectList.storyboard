@@ -20,7 +20,7 @@
         <!--Projects-->
         <scene sceneID="E1x-Tw-Itr">
             <objects>
-                <viewController storyboardIdentifier="ProjectList" title="Projects" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rzs-Kb-a5z" customClass="ViewController" customModule="Busy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectList" title="Projects" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rzs-Kb-a5z" customClass="ProjectsViewController" customModule="Busy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T2W-Bs-hM9"/>
                         <viewControllerLayoutGuide type="bottom" id="7nb-Te-2Ce"/>
@@ -42,7 +42,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ULa-l0-228">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="46" id="Rsj-Tr-6C3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="projectListCell" rowHeight="46" id="Rsj-Tr-6C3">
                                         <rect key="frame" x="0.0" y="28" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rsj-Tr-6C3" id="RqP-WP-PH0">
@@ -163,8 +163,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="agendaTableView" destination="ULa-l0-228" id="idS-Ln-Uvp"/>
                         <outlet property="searchDisplayController" destination="pf7-gk-UCa" id="lBJ-e6-TjP"/>
+                        <outlet property="tableView" destination="ULa-l0-228" id="rEe-W9-M6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fud-50-955" sceneMemberID="firstResponder"/>
