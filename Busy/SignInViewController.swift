@@ -39,6 +39,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
                 var userObj = User(firebaseUID: (firebaseUser?.uid)!, displayName: (firebaseUser?.displayName)!, email: (firebaseUser?.email)!)
                 // create a new user object (different variable name to differentiate from 'user' used above
                 // This user object will be used internally, passed through the view controllers
+                print("set")
                 destinationVC.userObject = userObj
                 
             }

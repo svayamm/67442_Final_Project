@@ -24,10 +24,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //tabBar.selectedItem = (tabBar.items?[0])! as UITabBarItem;
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
         let usersRef = rootRef.child("users")
+        print("\nHI\n")
         // creating child node for 'users' directory in database
         guard let userFUID = userObject?.firebaseUID else {print("userObject not set1"); return}
         let idRef = usersRef.child(userFUID)
@@ -48,6 +46,12 @@ class ViewController: UIViewController {
             
             print("Successfully saved user in FIR Database")
         })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        print("\nhi\n")
+        
     }
     
     

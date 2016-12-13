@@ -53,7 +53,7 @@ class ProjectsViewController: UIViewController {
         // probably ought to format the date string nicely
         
         cell.Due.text = deadlineString
-        //cell.Title = proj.name
+        cell.Title.text = projectAttributes["projectTitle"] as! String
         //cell.taskCount = proj.tasks.count
         //cell.textLabel?.text = self.projectList[indexPath.row]
         
