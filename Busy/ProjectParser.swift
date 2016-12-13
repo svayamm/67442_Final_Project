@@ -1,20 +1,4 @@
-//
-//  ProjectJSONParser.swift
-//  Busy
-//
-//  Created by j w on 12/7/16.
-//  Copyright © 2016 Svayam Mishra. All rights reserved.
-//
 
-import Foundation
-import Firebase
-
-class ProjectParser {
-    
-    class func getData(){
-        
-    }
-    
     /* 
      // code for table views, specifically agenda
      
@@ -77,7 +61,7 @@ class ProjectParser {
      
     */
     
-    let userProjectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
+    // let userProjectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
 
 /*    
      For reading data from the Firebase database, provide it with a reference location (as above)
@@ -88,17 +72,21 @@ class ProjectParser {
      one can also use observeSingleEvent, which will read the location once and return
      the required values. This
      
-     userProjectsRef.observeEvent(eventType: .value, with: { (snapshot) in
+     userProjectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
         // snapshot.children = all projects listed under FUID
-        for project in snapshot.children {
+        let projectDictionary = snapshot.value as? [String : AnyObject] ?? [:]
+        for project in projectDictionary {
             if let deadline = project.value["projectDeadline"] {
                 addProject(displayItems[deadline], project)
             }
     }
     }) */
-}
 
-//                let dateFormatter = DateFormatter()
-//                dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy"
-//                let date = dateFormatter.dateFromString(deadline)
-//                let currentDate = NSDate()
+/*
+    For writing data to the database, 
+ 
+ 
+ 
+ 
+ 
+ */

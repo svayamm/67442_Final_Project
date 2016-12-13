@@ -18,6 +18,8 @@ import Firebase
 class ProjectsViewController: UIViewController {
     let projectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
     var projectList = [String:AnyObject]()
+    var titleAsKey = [String:[String:AnyObject]]()
+    var titleIndex = [String]()
     @IBOutlet var tableView: UITableView?
     
     override func viewDidLoad() {
@@ -29,15 +31,14 @@ class ProjectsViewController: UIViewController {
         return self.projectList.count;
     }
     func parseProjectList(){
-        var b = [String:[String:String]]()
-        var c = [String]()
+        
         for project in projectList{
-            let title = project["title"]
-            b[title] = project.value
-            //b = b.sort()
+            let title = project.value["projectTitle"] as! String
+            titleAsKey[title] = project.value as? [String : AnyObject]
+            let sortedTitles = Array(titleAsKey.keys).sorted(by: <)
             var indexKey = 0
-            for sortedTitle in b {
-                c.append(sortedTitle)
+            for sortedTitle in sortedTitles {
+                titleIndex.append(sortedTitle)
                 indexKey+=1
             }
         }
@@ -45,10 +46,15 @@ class ProjectsViewController: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //var cell:UITableViewCell = (self.tableView?.dequeueReusableCell(withIdentifier: "cell"))! as UITableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! ProjectTableViewCell
-        let proj = projectList[indexPath.row] //as! Project
-        cell.Due = proj.deadline
-        cell.Title = proj.name
-        cell.taskCount = proj.tasks.count
+        let projName = titleIndex[indexPath.row]
+        let projectAttributes = titleAsKey[projName]! as [String:AnyObject]
+        let deadlineString = projectAttributes["projectDeadline"] as! String
+
+        // probably ought to format the date string nicely
+        
+        cell.Due.text = deadlineString
+        //cell.Title = proj.name
+        //cell.taskCount = proj.tasks.count
         //cell.textLabel?.text = self.projectList[indexPath.row]
         
         return cell
