@@ -81,6 +81,11 @@ class NewTaskFormViewController: FormViewController {
         row.configuration.cell.required = true
         section1.rows.append(row)
         
+        row = FormRowDescriptor(tag: Static.description, type: .picker, title: "projectID")
+        row.configuration.cell.appearance = ["textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
+        row.configuration.cell.required = true
+        section1.rows.append(row)
+        
         row = FormRowDescriptor(tag: Static.description, type: .picker, title: "Priority")
         row.configuration.cell.appearance = ["textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
         row.configuration.cell.required = true
