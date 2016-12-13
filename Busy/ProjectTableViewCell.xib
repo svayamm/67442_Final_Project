@@ -52,6 +52,13 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="Due" destination="4Rc-3n-6Hs" id="Exn-fR-kdh"/>
+                <outlet property="DueLabel" destination="NCb-fS-f6A" id="6Rz-IS-naA"/>
+                <outlet property="Title" destination="kiS-fr-6qU" id="rst-iW-HEL"/>
+                <outlet property="taskCount" destination="M6l-jx-JH6" id="wYX-bp-M9W"/>
+                <outlet property="taskCountLabel" destination="Q46-bN-BQ2" id="U9r-Yg-e8k"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
