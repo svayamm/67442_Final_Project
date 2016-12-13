@@ -136,7 +136,7 @@ class NewFormViewController: FormViewController {
         var convertedDate = dateFormatter.string(from: filledForm["deadline"] as! Date)
         let projectDeadline = convertedDate
         let repoLink = filledForm["repo"]
-        let soloProjectDict = ["projectTitle":projectTitle,"description": description, "projectDeadline": projectDeadline, "repoLink": repoLink, "id": UUID, "type":projectType, "users":userList, "assignments":assignments, "tasks":tasks, "complete":complete] as [String : Any]
+        let soloProjectDict = ["projectTitle":projectTitle!,"description": description!, "projectDeadline": projectDeadline as AnyObject, "repoLink": repoLink!, "id": UUID as AnyObject, "type":projectType as AnyObject, "users":userList as AnyObject, "assignments":assignments as AnyObject, "tasks":tasks as AnyObject, "complete":complete as AnyObject] as [String : AnyObject]
         // dictionary of project info created, to be passed into database
         return soloProjectDict
     }
