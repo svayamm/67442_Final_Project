@@ -8,7 +8,7 @@
  
  project name duplicates edge case (titleAsKey dictionary does not allow for duplicate project titles)
  
- 
+ check authentication state?, call functions for filtering table and actions if authenticated
  
  
  

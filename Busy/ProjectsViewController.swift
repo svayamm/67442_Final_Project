@@ -7,11 +7,6 @@
 //
 
 import Foundation
-// add firebase
-
-
-
-// check authentication state, call functions for filtering table and actions if authenticated
 import UIKit
 import Firebase
 
@@ -31,7 +26,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView?.reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.projectList.count-1; // -1 fixes off-by-one error
+        return self.titleIndex.count;
     }
     func parseProjectList(){
         for project in projectList{
@@ -67,8 +62,6 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     override func viewDidAppear(_ animated: Bool) {
         projectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
-            // snapshot.children = all projects listed under FUID
-
             let projList = snapshot.value as? [String : AnyObject] ?? [:]
             self.projectList = projList
 

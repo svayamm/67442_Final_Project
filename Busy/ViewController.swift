@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     var userObject: User?
     // this is the user object that will be used throughout the application henceforth
     let rootRef = FIRDatabase.database().reference()
+    var data = [String:AnyObject]()
     
-    @IBOutlet var test: UIButton!
     @IBOutlet var agendaTableView: UITableView!
     @IBOutlet var timeframeSegment: UISegmentedControl!
     @IBOutlet var tabBar: UITabBar!
@@ -49,9 +49,7 @@ class ViewController: UIViewController {
         })
     }
     
-    override func viewDidAppear(_ animated: Bool) {
 
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -72,6 +70,36 @@ class ViewController: UIViewController {
             print("All Items selected");
         default:
             break;
+        }
+    }
+    
+    // MARK: - Database retrieval
+    override func viewDidAppear(_ animated: Bool) {
+        rootRef.observe(FIRDataEventType.value, with: { (snapshot) in
+            let dataDict = snapshot.value as? [String : AnyObject] ?? [:]
+            self.data = dataDict
+            
+            self.parseProjectList()
+            self.tableView?.reloadData()
+        })
+        
+    }
+    func parseProjectList(){
+        for project in projectList{
+            let title = project.value["projectTitle"] as! String
+            titleAsKey[title] = project.value as? [String : AnyObject]
+        }
+        let sortedTitles = Array(titleAsKey.keys).sorted(by: <)
+        var indexKey = 0
+        for sortedTitle in sortedTitles {
+            titleIndex.append(sortedTitle)
+            indexKey+=1
+        }
+        self.tableView?.reloadData()
+    }
+    func parseDataDict() {
+        for item in data {
+            
         }
     }
     
