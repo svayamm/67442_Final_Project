@@ -20,16 +20,46 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var TaskCount: UILabel!
     @IBOutlet weak var ProjCount: UILabel!
     
-    //let projectsRef = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!)
+    let tasksRef = FIRDatabase.database().reference().child("tasks").child((FIRAuth.auth()?.currentUser?.uid)!)
+    let projectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
+    var taskList = [String:AnyObject]()
+    var projectList = [String:AnyObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let firebaseUser = FIRAuth.auth()?.currentUser
         Name.text = firebaseUser?.displayName
         Email.text = firebaseUser?.email
+        TaskCount.text = String(taskList.count)
+        ProjCount.text = String(projectList.count)
         //let userObj = User(firebaseUID: (firebaseUser?.uid)!, displayName: (firebaseUser?.displayName)!, email: (firebaseUser?.email)!)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("hello")
+        tasksRef.observe(FIRDataEventType.value, with: { (snapshot) in
+            // snapshot.children = all projects listed under FUID
+            //self.projectList.removeAll()
+            let taskList = snapshot.value as? [String : AnyObject] ?? [:]
+            self.taskList = taskList
+            print("world")
+            //self.parseTaskList()
+            //self.tableView?.reloadData()
+            //            for project in snapshot.value as? Dictionary {
+            //                self.projectList.append(project)
+            //            }
+        })
+        projectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
+            // snapshot.children = all projects listed under FUID
+            
+            let projList = snapshot.value as? [String : AnyObject] ?? [:]
+            self.projectList = projList
+            
+            //self.parseProjectList()
+            //self.tableView?.reloadData()
+        })
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

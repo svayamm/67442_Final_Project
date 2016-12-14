@@ -12,7 +12,9 @@ import Firebase
 
 class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let tasksRef = FIRDatabase.database().reference().child("tasks").child((FIRAuth.auth()?.currentUser?.uid)!)
+    let projectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
     var taskList = [String:AnyObject]()
+    var projectList = [String:AnyObject]()
     var titleAsKey = [String:[String:AnyObject]]()
     var titleIndex = [String]()
     @IBOutlet var tableView: UITableView?
@@ -59,10 +61,9 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // probably ought to format the date string nicely
         
-        //cell.Due.text = deadlineString
-        cell.TaskName?.text = "TEXT HERE"
-            //taskAttributes["taskTitle"] as! String
-        //cell.taskCount = proj.tasks.count
+        cell.Due?.text = taskAttributes["taskDeadline"] as! String//deadlineString
+        cell.TaskName?.text = taskAttributes["taskTitle"] as! String
+        cell.projName?.text = taskAttributes["projectID"] as! String
         //cell.textLabel?.text = self.projectList[indexPath.row]
         
         return cell
@@ -84,7 +85,15 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //                self.projectList.append(project)
             //            }
         })
-        
+        projectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
+            // snapshot.children = all projects listed under FUID
+            
+            let projList = snapshot.value as? [String : AnyObject] ?? [:]
+            self.projectList = projList
+            
+            //self.parseProjectList()
+            self.tableView?.reloadData()
+        })
     }
     
     override func didReceiveMemoryWarning() {
