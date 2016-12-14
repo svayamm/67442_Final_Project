@@ -15,7 +15,7 @@ import Foundation
 import UIKit
 import Firebase
 
-class ProjectsViewController: UIViewController {
+class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let projectsRef = FIRDatabase.database().reference().child("projects").child((FIRAuth.auth()?.currentUser?.uid)!)
     var projectList = [String:AnyObject]()
     var titleAsKey = [String:[String:AnyObject]]()
@@ -25,58 +25,67 @@ class ProjectsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "projectListCell")
+        let cellNib = UINib(nibName: "ProjectTableViewCell", bundle: nil)
+        tableView?.register(cellNib, forCellReuseIdentifier: "projectListCell")
+        // get the data for the table
+        //parseProjectList()
+        self.tableView?.reloadData()
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.projectList.count;
     }
     func parseProjectList(){
         print("pls")
+        print(projectList.count)
         for project in projectList{
             print("proj")
             let title = project.value["projectTitle"] as! String
+            print(title)
             titleAsKey[title] = project.value as? [String : AnyObject]
-            let sortedTitles = Array(titleAsKey.keys).sorted(by: <)
-            var indexKey = 0
-            for sortedTitle in sortedTitles {
-                titleIndex.append(sortedTitle)
-                indexKey+=1
-            }
         }
+        let sortedTitles = Array(titleAsKey.keys).sorted(by: <)
+        var indexKey = 0
+        for sortedTitle in sortedTitles {
+            print(sortedTitle)
+            titleIndex.append(sortedTitle)
+            indexKey+=1
+        }
+        self.tableView?.reloadData()
     }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //var cell:UITableViewCell = (self.tableView?.dequeueReusableCell(withIdentifier: "cell"))! as UITableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectListCell", for: indexPath as IndexPath) as! ProjectTableViewCell
         let projName = titleIndex[indexPath.row]
         let projectAttributes = titleAsKey[projName]! as [String:AnyObject]
-        let deadlineString = projectAttributes["projectDeadline"] as! String
+        //let deadlineString = projectAttributes["projectDeadline"] as! String
 
         // probably ought to format the date string nicely
         
         //cell.Due.text = deadlineString
-        cell.Title.text = projectAttributes["projectTitle"] as! String
+        cell.Title?.text = projectAttributes["projectTitle"] as! String
         //cell.taskCount = proj.tasks.count
         //cell.textLabel?.text = self.projectList[indexPath.row]
         
         return cell
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You selected cell #\(indexPath.row)!")
     }
     override func viewDidAppear(_ animated: Bool) {
         print("hello")
         projectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
             // snapshot.children = all projects listed under FUID
-            self.projectList.removeAll()
+            //self.projectList.removeAll()
             let projList = snapshot.value as? [String : AnyObject] ?? [:]
             self.projectList = projList
             print("world")
+            self.parseProjectList()
+            self.tableView?.reloadData()
 //            for project in snapshot.value as? Dictionary {
 //                self.projectList.append(project)
 //            }
         })
-        parseProjectList()
-        self.tableView?.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
