@@ -40,8 +40,8 @@ class NewFormViewController: FormViewController {
     func submit(_: UIBarButtonItem!) {
         
         let message = self.form.formValues().description
-        
-        print(self.form.formValues()["title"])
+//        
+//        print(self.form.formValues()["title"])
         
         let alertController = UIAlertController(title: "Form output", message: message, preferredStyle: .alert)
         
@@ -74,11 +74,12 @@ class NewFormViewController: FormViewController {
         row.configuration.cell.required = true
         section1.rows.append(row)
         
-        let section2 = FormSectionDescriptor(headerTitle: "Optional input:", footerTitle: nil)
-        
         row = FormRowDescriptor(tag: Static.deadline, type: .date, title: "Due Date")
         row.configuration.cell.showsInputToolbar = true
-        section2.rows.append(row)
+        row.configuration.cell.required = true
+        section1.rows.append(row)
+        
+        let section2 = FormSectionDescriptor(headerTitle: "Optional input:", footerTitle: nil)
         
         row = FormRowDescriptor(tag: Static.repo, type: .text, title: "GitHub Repo")
         row.configuration.cell.appearance = ["textField.placeholder" : "e.g. profh/StarTrekSwift" as AnyObject, "textField.textAlignment" : NSTextAlignment.right.rawValue as AnyObject]
