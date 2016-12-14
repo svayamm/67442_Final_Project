@@ -93,10 +93,9 @@ class NewFormViewController: FormViewController {
             self.view.endEditing(true)
 //            // Create a new "NewProjectTypes" instance.
 //            let storyboard = UIStoryboard(name: "NewProjectTypes", bundle: nil)
-//            
 //            // Create an instance of the storyboard's initial view controller.
-            // change to correct identifier
-//            let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+//            // change to correct identifier
+//            let controller = storyboard.instantiateViewController(withIdentifier: "ViewController Scene") as UIViewController
 //            
 //            // Display the new view controller.
 //             weak var weakSelf = self // required to fix 'implicit use of self in closure' error
@@ -112,12 +111,9 @@ class NewFormViewController: FormViewController {
 
     func createSoloProject() -> [String: Any]{
         
-        // create new node on 'projects' directory, with user's FirebaseUID string as key (denormalisation!)
+
         let filledForm = self.form.formValues()
-//        guard let projectTitle = filledForm["title"] else {print("Form field not set: title"); return}
-//        guard let description = filledForm["description"] else {print("Form field not set: description"); return}
-//        guard let projectDeadline = filledForm["deadline"] else {print("Form field not set: deadline"); return}
-//        guard let repoLink = filledForm["repo"] else {print("Form field not set: repo"); return}
+
         // Auto-generated values
         let UUID = NSUUID.init().uuidString
         let projectType = "solo"
@@ -149,6 +145,7 @@ class NewFormViewController: FormViewController {
                 // INCLUDE OTHER MODEL PROPERTIES; TRIAL ONLY
                 let dict = self.createSoloProject()
                 let projectID = dict["id"] as! String
+                        // create new node on 'projects' directory, with user's FirebaseUID string as key (denormalisation!)
                 let userProjectsRef = FIRDatabase.database().reference().child("projects").child(currentFUID!).child(projectID)
                 userProjectsRef.updateChildValues(dict, withCompletionBlock: {
                     (err, ref) in

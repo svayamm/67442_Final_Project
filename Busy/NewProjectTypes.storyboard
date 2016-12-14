@@ -48,7 +48,7 @@
         <scene sceneID="IiH-8k-VNI">
             <objects>
                 <navigationController storyboardIdentifier="NewPForm" title="NewForm" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pts-xN-YCj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bCH-LT-BSA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bCH-LT-BSA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -60,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="-1601" y="190"/>
         </scene>
-        <!--View Controller-->
+        <!-- ViewController-->
         <scene sceneID="WAa-6O-fKn">
             <objects>
                 <viewController storyboardIdentifier="NewPage" id="zB9-96-DqJ" sceneMemberID="viewController">
@@ -68,6 +68,9 @@
                         <viewControllerLayoutGuide type="top" id="llK-sn-DRW"/>
                         <viewControllerLayoutGuide type="bottom" id="MRA-hR-VYO"/>
                     </layoutGuides>
+                    <string key="title" base64-UTF8="YES">
+EFZpZXdDb250cm9sbGVyA
+</string>
                     <view key="view" contentMode="scaleToFill" id="OWI-ml-DMz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +129,7 @@
                                 <items>
                                     <barButtonItem style="plain" id="j3F-lz-EHe">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JT3-80-jVy">
-                                            <rect key="frame" x="16" y="485" width="30" height="30"/>
+                                            <rect key="frame" x="16" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title=" "/>
                                         </button>
@@ -283,24 +286,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfO-Hs-VHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="190.25487256371815"/>
-        </scene>
-        <!--New Form View Controller-->
-        <scene sceneID="4HG-GQ-06c">
-            <objects>
-                <viewController id="ZNM-1u-Dk6" customClass="NewFormViewController" customModule="Busy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cvl-ab-xET"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hit-em-jLW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RSW-yT-YJd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p8L-IS-zw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="802" y="228"/>
         </scene>
         <!--Agenda-->
         <scene sceneID="mER-HL-heO">
