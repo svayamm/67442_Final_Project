@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var tasks = [String:AnyObject]()
     var displayList = [String:[ AnyObject]]()
     var currentDate = Date()
-    var dateInWeek = Date()
+    var newDateComponents = DateComponents()
     var itemsToDisplay = [AnyObject]()
 
     
@@ -145,43 +145,47 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        // sets dateInWeek to 7 days from currentDate
 //    }
 
-//    func convertDeadline(deadline: String)->Date{
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy" // EEEE is Day of week
-//        let deadlineNSDate = dateFormatter.date(from: deadline)
-//        return deadlineNSDate!
-//    }
+    func convertDeadline(deadline: String)->Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy" // EEEE is Day of week
+        let deadlineNSDate = dateFormatter.date(from: deadline)
+        return deadlineNSDate!
+    }
     
     // MARK:- Filters for chosen segment
-//    var todayList = [AnyObject]()
-//    func filterForToday(){
-//        for deadline in displayList.keys{
-//            if deadline == "NA" {continue} // skip items where deadline not set
-//            else {
-//                let deadlineNSDate = convertDeadline(deadline: deadline)
-//                if deadlineNSDate <= currentDate{
-//                    for itemDictionary in displayList[deadline]! {
-//                        todayList.append(itemDictionary)
-//                    }
-//                }
-//            }
-//        }
-//    }
-//    
-//    var weekList = [AnyObject]()
-//    func filterForWeek(){
-//        for deadline in displayList.keys{
-//            if deadline == "NA" {continue} // skip items where deadline not set
-//            else {
-//                let deadlineNSDate = convertDeadline(deadline: deadline)
-//                if deadlineNSDate <= dateInWeek{
-//                    for itemDictionary in displayList[deadline]! {
-//                        weekList.append(itemDictionary)
-//                    }
-//                }
-//            }
-//        }
-//    }
+    var todayList = [AnyObject]()
+    func filterForToday(){
+        todayList = []
+        for deadline in displayList.keys{
+            if deadline == "NA" {continue} // skip items where deadline not set
+            else {
+                let deadlineNSDate = convertDeadline(deadline: deadline)
+                if deadlineNSDate <= currentDate{
+                    for itemDictionary in displayList[deadline]! {
+                        todayList.append(itemDictionary)
+                    }
+                }
+            }
+        }
+    }
+
+    var weekList = [AnyObject]()
+    func filterForWeek(){
+        weekList = []
+        for deadline in displayList.keys{
+            if deadline == "NA" {continue} // skip items where deadline not set
+            else {
+                let deadlineNSDate = convertDeadline(deadline: deadline)
+                newDateComponents.day = 7
+                let dateInWeek = Calendar.current.date(byAdding: newDateComponents, to: currentDate)!
+                if deadlineNSDate <= dateInWeek{
+                    for itemDictionary in displayList[deadline]! {
+                        weekList.append(itemDictionary)
+                    }
+                }
+            }
+        }
+    }
     
     var allList = [AnyObject]()
     func noFilter(){
@@ -198,12 +202,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
         case 0:
             print("Today selected");
-            //filterForToday();
-            //itemsToDisplay = todayList
+            filterForToday();
+            itemsToDisplay = todayList
         case 1:
             print("This Week selected");
-            //filterForWeek();
-            //itemsToDisplay = weekList
+            filterForWeek();
+            itemsToDisplay = weekList
         case 2:
             print("All Items selected");
             noFilter();
