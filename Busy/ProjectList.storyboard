@@ -71,6 +71,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rzs-Kb-a5z" id="HQa-MW-7B8"/>
+                                    <outlet property="delegate" destination="rzs-Kb-a5z" id="sX4-uv-bHe"/>
+                                </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="R62-EL-0Sc">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
