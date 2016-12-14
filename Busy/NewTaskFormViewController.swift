@@ -91,12 +91,10 @@ class NewTaskFormViewController: FormViewController {
         row.configuration.cell.required = true
         section1.rows.append(row)
         
-        let section2 = FormSectionDescriptor(headerTitle: "Optional input:", footerTitle: nil)
-        
         row = FormRowDescriptor(tag: Static.deadline, type: .date, title: "Due Date")
         row.configuration.cell.showsInputToolbar = true
-        section2.rows.append(row)
-        
+        row.configuration.cell.required = true
+        section1.rows.append(row)
 
         
         let section3 = FormSectionDescriptor(headerTitle: nil, footerTitle: nil)
