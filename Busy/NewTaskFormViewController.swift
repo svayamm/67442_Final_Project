@@ -116,7 +116,7 @@ class NewTaskFormViewController: FormViewController {
         }
         section3.rows.append(row)
         
-        form.sections = [section1, section2, section3]
+        form.sections = [section1, section3]
         
         self.form = form
     }
