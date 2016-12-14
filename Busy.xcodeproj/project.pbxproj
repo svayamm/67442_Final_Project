@@ -39,6 +39,7 @@
 		CB53D1B71DE76D8900AEEFAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B61DE76D8900AEEFAC /* User.swift */; };
 		CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B81DE76DA500AEEFAC /* Task.swift */; };
 		CB54E6F01E005C0B0073B888 /* NewTaskFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB54E6EF1E005C0B0073B888 /* NewTaskFormViewController.swift */; };
+		CB54E6F21E00DA8A0073B888 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB54E6F11E00DA8A0073B888 /* TaskViewController.swift */; };
 		CB5CFB231DF896E100FFE8FA /* ProjectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB221DF896E100FFE8FA /* ProjectParser.swift */; };
 		CB5CFB251DF896ED00FFE8FA /* TaskParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB241DF896ED00FFE8FA /* TaskParser.swift */; };
 		CB5CFB271DF896F700FFE8FA /* AssignmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB261DF896F700FFE8FA /* AssignmentParser.swift */; };
@@ -113,6 +114,7 @@
 		CB53D1B61DE76D8900AEEFAC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CB53D1B81DE76DA500AEEFAC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		CB54E6EF1E005C0B0073B888 /* NewTaskFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskFormViewController.swift; sourceTree = "<group>"; };
+		CB54E6F11E00DA8A0073B888 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		CB5CFB221DF896E100FFE8FA /* ProjectParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectParser.swift; sourceTree = "<group>"; };
 		CB5CFB241DF896ED00FFE8FA /* TaskParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskParser.swift; sourceTree = "<group>"; };
 		CB5CFB261DF896F700FFE8FA /* AssignmentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentParser.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				CB5CFB3D1DF8B5D600FFE8FA /* UserProfile.storyboard */,
 				CB5CFB3F1DF8DF9500FFE8FA /* UPTaskTableViewCell.swift */,
 				CB5CFB401DF8DF9500FFE8FA /* UPTaskTableViewCell.xib */,
+				CB54E6F11E00DA8A0073B888 /* TaskViewController.swift */,
 			);
 			name = "'User Profile' tab";
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				CB5CFB3C1DF8B5B800FFE8FA /* UserProfileViewController.swift in Sources */,
 				A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */,
 				CB5CFB251DF896ED00FFE8FA /* TaskParser.swift in Sources */,
+				CB54E6F21E00DA8A0073B888 /* TaskViewController.swift in Sources */,
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
 				A465E9D41DF7B67D00C40CF2 /* Notes for cleanup.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
