@@ -54,6 +54,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VJQ-zT-kAf" id="Em4-Pb-4QN"/>
+                                    <outlet property="delegate" destination="VJQ-zT-kAf" id="172-Yp-hlR"/>
+                                </connections>
                             </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="846-am-iwH">
                                 <items>
@@ -152,7 +156,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="agendaTableView" destination="bqb-bj-lCh" id="lo1-C7-Yl3"/>
+                        <outlet property="agendaTableView" destination="bqb-bj-lCh" id="PHi-sn-bpV"/>
                         <outlet property="searchDisplayController" destination="Mzg-5m-sZB" id="JFt-73-n74"/>
                     </connections>
                 </viewController>
