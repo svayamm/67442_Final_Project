@@ -32,7 +32,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView?.reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.projectList.count;
+        return self.projectList.count-1;
     }
     func parseProjectList(){
         print("pls")
@@ -55,6 +55,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //var cell:UITableViewCell = (self.tableView?.dequeueReusableCell(withIdentifier: "cell"))! as UITableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectListCell", for: indexPath as IndexPath) as! ProjectTableViewCell
+        print(indexPath.row, titleIndex.count)
         let projName = titleIndex[indexPath.row]
         let projectAttributes = titleAsKey[projName]! as [String:AnyObject]
         //let deadlineString = projectAttributes["projectDeadline"] as! String
