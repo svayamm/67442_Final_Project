@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     // this is the user object that will be used throughout the application henceforth
     let rootRef = FIRDatabase.database().reference()
     var data = [String:AnyObject]()
+    var projects = [String:AnyObject]()
+    var tasks = [String:AnyObject]()
+    var displayList = [String:[ AnyObject]]()
+    var currentDate = NSDate()
+    var dateInWeek: NSDate
+
     
     @IBOutlet var agendaTableView: UITableView!
     @IBOutlet var timeframeSegment: UISegmentedControl!
@@ -23,6 +29,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        convertCurrentDate()
 
         let usersRef = rootRef.child("users")
         // creating child node for 'users' directory in database
@@ -79,29 +87,117 @@ class ViewController: UIViewController {
             let dataDict = snapshot.value as? [String : AnyObject] ?? [:]
             self.data = dataDict
             
-            self.parseProjectList()
-            self.tableView?.reloadData()
+            self.parseDataDict()
+            //self.tableView?.reloadData()
         })
         
     }
+    func parseDataDict(){
+        let userFID = FIRAuth.auth()?.currentUser?.uid
+        guard let allProjects = data["projects"] as? [String:AnyObject] else {print("Could not unwrap projects"); return}
+        let userProjects = allProjects[userFID!] as? [String:AnyObject] ?? [:]
+        self.projects = userProjects
+        parseProjectList()
+
+        guard let allTasks = data["tasks"] as? [String:AnyObject] else {print("Could not unwrap tasks"); return}
+        let userTasks = allTasks[userFID!] as? [String:AnyObject] ?? [:]
+        self.tasks = userTasks
+        parseTasksList()
+
+    }
     func parseProjectList(){
-        for project in projectList{
-            let title = project.value["projectTitle"] as! String
-            titleAsKey[title] = project.value as? [String : AnyObject]
+        for project in projects {
+            let deadline = project.value["projectDeadline"] as? String ?? "NA"
+            var existingItems = displayList[deadline] as [AnyObject]? ?? []
+            let newItems = existingItems.append(project.value)
+            displayList[deadline] = newItems
         }
-        let sortedTitles = Array(titleAsKey.keys).sorted(by: <)
-        var indexKey = 0
-        for sortedTitle in sortedTitles {
-            titleIndex.append(sortedTitle)
-            indexKey+=1
-        }
-        self.tableView?.reloadData()
+        //self.tableView?.reloadData()
     }
-    func parseDataDict() {
-        for item in data {
+    func parseTasksList() {
+        for task in tasks {
+            let deadline = task.value["taskDeadline"] as? String ?? "NA"
+            var existingItems = displayList[deadline] as [AnyObject]? ?? []
+            let newItems = existingItems.append(task.value)
+            displayList[deadline] = newItems
+        }
+    }
+    
+    // MARK:- Working with dates
+
+    
+    func convertCurrentDate() {
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.timeStyle = DateFormatterStyle.NoStyle // strips time from string
+        dateFormatter2.dateStyle = NSDateFormatterStyle.MediumStyle
+        print(dateFormatter2.stringFromDate(currentDate)) // returns currentDate as date only, no time
+        let dateFormatter3 = DateFormatter()
+        dateFormatter3.dateFormat = "EEEE, MMMM dd, yyyy" // EEEE is Day of week
+        let todayNSDate = dateFormatter3.dateFromString(currentDate)
+        // converts currentDate back to NSDate object for comparison
+        currentDate = todayNSDate
+        let newDateComponents = NSDateComponents()
+        newDateComponents.day = 7
+        dateInWeek = NSCalendar.currentCalendar().dateByAddingComponents(newDateComponents, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
+        // sets dateInWeek to 7 days from currentDate
+    }
+
+    func convertDeadline(deadline: String)->NSDate{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy" // EEEE is Day of week
+        let deadlineNSDate = dateFormatter.dateFromString(deadline)
+        return deadlineNSDate
+    }
+    
+    // MARK:- Filters for chosen segment
+    var todayList = [AnyObject]()
+    func filterForToday(){
+        for deadline in displayList.keys{
+            if deadline == "NA" {continue} // skip items where deadline not set
+            else {
+                deadlineNSDate = convertDeadline(deadline)
+                if deadlineNSDate == deadlineNSDate.earlierDate(currentDate){
+                    for itemDictionary in deadline.values {
+                        todayList.append(itemDictionary)
+                    }
+                }
+            }
+        }
+    }
+    
+    var weekList = [AnyObject]()
+    func filterForWeek(){
+        for deadline in displayList.keys{
+            if deadline == "NA" {continue} // skip items where deadline not set
+            else {
+                deadlineNSDate = convertDeadline(deadline)
+                if deadlineNSDate == deadlineNSDate.earlierDate(dateInWeek){
+                    for itemDictionary in deadline.values {
+                        weekList.append(itemDictionary)
+                    }
+                }
+            }
+        }
+    }
+    
+
+    func determineTableValues(){
+        switch timeframeSegment.selectedSegmentIndex
+        {
+        case 0:
+            print("Today selected");
+            filterForToday();
             
+        case 1:
+            print("This Week selected");
+            filterForWeek()
+        case 2:
+            print("All Items selected");
+        default:
+            break;
         }
     }
+    
     
 }
 
