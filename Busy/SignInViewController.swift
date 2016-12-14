@@ -35,11 +35,10 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         if segue.identifier == "LoginToMain"
         {
             if let destinationVC = segue.destination as?  ViewController {
-                var firebaseUser = FIRAuth.auth()?.currentUser
-                var userObj = User(firebaseUID: (firebaseUser?.uid)!, displayName: (firebaseUser?.displayName)!, email: (firebaseUser?.email)!)
+                let firebaseUser = FIRAuth.auth()?.currentUser
+                let userObj = User(firebaseUID: (firebaseUser?.uid)!, displayName: (firebaseUser?.displayName)!, email: (firebaseUser?.email)!)
                 // create a new user object (different variable name to differentiate from 'user' used above
-                // This user object will be used internally, passed through the view controllers
-                print("set")
+                // This user object will be used internally, passed to the Agenda view controller
                 destinationVC.userObject = userObj
                 
             }
