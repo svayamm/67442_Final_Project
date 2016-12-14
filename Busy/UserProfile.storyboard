@@ -262,6 +262,16 @@
                             <constraint firstItem="upw-gu-5mJ" firstAttribute="trailing" secondItem="gXp-Ee-GAe" secondAttribute="trailing" id="wJx-DA-tVR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Email" destination="eO8-zG-rSa" id="shx-nT-pGZ"/>
+                        <outlet property="EmailLabel" destination="e27-cg-ikh" id="0ZG-at-K81"/>
+                        <outlet property="Name" destination="4Zu-F3-mWq" id="Uea-Zt-4DV"/>
+                        <outlet property="NameLabel" destination="hPE-y8-Ef5" id="iKl-Ag-kEP"/>
+                        <outlet property="ProjCount" destination="iGa-bi-554" id="V27-Lm-nAz"/>
+                        <outlet property="ProjCountLabel" destination="o8z-lZ-OrC" id="VdL-c7-r2g"/>
+                        <outlet property="TaskCount" destination="0zs-0Z-loA" id="HhY-Hf-qZM"/>
+                        <outlet property="TaskCountLabel" destination="DkB-ut-6fK" id="bbT-2l-lzF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVw-t1-CkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

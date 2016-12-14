@@ -11,11 +11,23 @@ import UIKit
 import Firebase
 
 class UserProfileViewController: UIViewController {
+    @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var EmailLabel: UILabel!
+    @IBOutlet weak var TaskCountLabel: UILabel!
+    @IBOutlet weak var ProjCountLabel: UILabel!
+    @IBOutlet weak var Name: UILabel!
+    @IBOutlet weak var Email: UILabel!
+    @IBOutlet weak var TaskCount: UILabel!
+    @IBOutlet weak var ProjCount: UILabel!
     
+    //let projectsRef = FIRDatabase.database().reference().child("users").child((FIRAuth.auth()?.currentUser?.uid)!)
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        let firebaseUser = FIRAuth.auth()?.currentUser
+        Name.text = firebaseUser?.displayName
+        Email.text = firebaseUser?.email
+        //let userObj = User(firebaseUID: (firebaseUser?.uid)!, displayName: (firebaseUser?.displayName)!, email: (firebaseUser?.email)!)
     }
     
     
