@@ -24,6 +24,7 @@
 		A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */; };
 		A430D7F11DD964ED004C6AAF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */; };
 		A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430D7F21DD966EB004C6AAF /* NewViewController.swift */; };
+		A44346E21E00E8FB0079DB17 /* Notes for code reference in Resources */ = {isa = PBXBuildFile; fileRef = A44346E11E00E8FB0079DB17 /* Notes for code reference */; };
 		A465E9CE1DF5F3C500C40CF2 /* ProjectList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465E9CD1DF5F3C500C40CF2 /* ProjectList.storyboard */; };
 		A465E9D01DF5F40100C40CF2 /* ProjectDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A465E9CF1DF5F40100C40CF2 /* ProjectDetail.storyboard */; };
 		A465E9D41DF7B67D00C40CF2 /* Notes for cleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465E9D31DF7B67D00C40CF2 /* Notes for cleanup.swift */; };
@@ -95,6 +96,7 @@
 		A430D7EE1DD964DC004C6AAF /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		A430D7F01DD964ED004C6AAF /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A430D7F21DD966EB004C6AAF /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		A44346E11E00E8FB0079DB17 /* Notes for code reference */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes for code reference"; sourceTree = "<group>"; };
 		A465E9CD1DF5F3C500C40CF2 /* ProjectList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectList.storyboard; sourceTree = "<group>"; };
 		A465E9CF1DF5F40100C40CF2 /* ProjectDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProjectDetail.storyboard; sourceTree = "<group>"; };
 		A465E9D31DF7B67D00C40CF2 /* Notes for cleanup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notes for cleanup.swift"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				A465E9D31DF7B67D00C40CF2 /* Notes for cleanup.swift */,
+				A44346E11E00E8FB0079DB17 /* Notes for code reference */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				CB5CFB2C1DF8A89B00FFE8FA /* Archive.storyboard in Resources */,
 				CB5CFB321DF8AA3000FFE8FA /* ArProjectTableViewCell.xib in Resources */,
 				CB5CFB421DF8DF9500FFE8FA /* UPTaskTableViewCell.xib in Resources */,
+				A44346E21E00E8FB0079DB17 /* Notes for code reference in Resources */,
 				CB5CFB361DF8AA6200FFE8FA /* ProjectTableViewCell.xib in Resources */,
 				A430D7B91DD89016004C6AAF /* Main.storyboard in Resources */,
 				A465E9CE1DF5F3C500C40CF2 /* ProjectList.storyboard in Resources */,
