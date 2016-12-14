@@ -127,7 +127,7 @@
                                 </items>
                             </tabBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jx2-hT-nPK">
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="CqO-nw-uHW" kind="show" id="V4s-KE-FBB"/>
                                 </connections>
@@ -136,7 +136,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="5z7-bU-wKt"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="T8t-td-GOu" kind="show" id="xEz-mT-N3j"/>
                                 </connections>
@@ -145,7 +145,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="5IX-Bv-XLv"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="O0C-6H-DYy" kind="show" id="Kzo-tl-Siw"/>
                                 </connections>
@@ -154,13 +154,13 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="1Xg-C7-6bc"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="Icq-HV-41p" kind="show" id="Ye5-zP-eac"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXp-Ee-GAe">
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPE-y8-Ef5">
                                 <frame key="frameInset" minX="16" minY="86" width="50" height="21"/>

@@ -82,7 +82,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6s-tn-oVh">
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="KDb-zQ-zcS" kind="show" id="NOB-XR-IxB"/>
                                 </connections>
@@ -91,7 +91,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="X6b-lf-aN7"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="b4i-Sy-xPR" kind="show" id="ZvM-It-P8x"/>
                                 </connections>
@@ -100,7 +100,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="zyX-nU-ipL"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="2di-Re-QxB" kind="show" id="EA4-5g-d7S"/>
                                 </connections>
@@ -109,10 +109,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="B1h-bN-WSm"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4O-oX-0ku">
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="BeZ-Nx-8gd" kind="show" id="QDT-Vi-NWw"/>
                                 </connections>
