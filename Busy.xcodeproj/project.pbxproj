@@ -40,9 +40,6 @@
 		CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B81DE76DA500AEEFAC /* Task.swift */; };
 		CB54E6F01E005C0B0073B888 /* NewTaskFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB54E6EF1E005C0B0073B888 /* NewTaskFormViewController.swift */; };
 		CB54E6F21E00DA8A0073B888 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB54E6F11E00DA8A0073B888 /* TaskViewController.swift */; };
-		CB5CFB231DF896E100FFE8FA /* ProjectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB221DF896E100FFE8FA /* ProjectParser.swift */; };
-		CB5CFB251DF896ED00FFE8FA /* TaskParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB241DF896ED00FFE8FA /* TaskParser.swift */; };
-		CB5CFB271DF896F700FFE8FA /* AssignmentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB261DF896F700FFE8FA /* AssignmentParser.swift */; };
 		CB5CFB2A1DF8A83A00FFE8FA /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB291DF8A83A00FFE8FA /* ArchiveViewController.swift */; };
 		CB5CFB2C1DF8A89B00FFE8FA /* Archive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5CFB2B1DF8A89B00FFE8FA /* Archive.storyboard */; };
 		CB5CFB311DF8AA3000FFE8FA /* ArProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB2F1DF8AA3000FFE8FA /* ArProjectTableViewCell.swift */; };
@@ -115,9 +112,6 @@
 		CB53D1B81DE76DA500AEEFAC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		CB54E6EF1E005C0B0073B888 /* NewTaskFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskFormViewController.swift; sourceTree = "<group>"; };
 		CB54E6F11E00DA8A0073B888 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
-		CB5CFB221DF896E100FFE8FA /* ProjectParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectParser.swift; sourceTree = "<group>"; };
-		CB5CFB241DF896ED00FFE8FA /* TaskParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskParser.swift; sourceTree = "<group>"; };
-		CB5CFB261DF896F700FFE8FA /* AssignmentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentParser.swift; sourceTree = "<group>"; };
 		CB5CFB291DF8A83A00FFE8FA /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 		CB5CFB2B1DF8A89B00FFE8FA /* Archive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Archive.storyboard; sourceTree = "<group>"; };
 		CB5CFB2F1DF8AA3000FFE8FA /* ArProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArProjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -273,9 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				A465E9D31DF7B67D00C40CF2 /* Notes for cleanup.swift */,
-				CB5CFB221DF896E100FFE8FA /* ProjectParser.swift */,
-				CB5CFB241DF896ED00FFE8FA /* TaskParser.swift */,
-				CB5CFB261DF896F700FFE8FA /* AssignmentParser.swift */,
 			);
 			name = Notes;
 			sourceTree = "<group>";
@@ -643,13 +634,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB5CFB311DF8AA3000FFE8FA /* ArProjectTableViewCell.swift in Sources */,
-				CB5CFB231DF896E100FFE8FA /* ProjectParser.swift in Sources */,
-				CB5CFB271DF896F700FFE8FA /* AssignmentParser.swift in Sources */,
 				A4F0D3DA1DF3B4590056E3E3 /* TableViewCell.swift in Sources */,
 				CB2F743B1DFABD9400228295 /* CheckBox.swift in Sources */,
 				CB5CFB3C1DF8B5B800FFE8FA /* UserProfileViewController.swift in Sources */,
 				A4C98A5A1DEB9362007BA672 /* SignInViewController.swift in Sources */,
-				CB5CFB251DF896ED00FFE8FA /* TaskParser.swift in Sources */,
 				CB54E6F21E00DA8A0073B888 /* TaskViewController.swift in Sources */,
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
 				A465E9D41DF7B67D00C40CF2 /* Notes for cleanup.swift in Sources */,
