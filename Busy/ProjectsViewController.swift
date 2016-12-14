@@ -28,32 +28,25 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         let cellNib = UINib(nibName: "ProjectTableViewCell", bundle: nil)
         tableView?.register(cellNib, forCellReuseIdentifier: "projectListCell")
         // get the data for the table
-        //parseProjectList()
         self.tableView?.reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.projectList.count-1;
+        return self.projectList.count-1; // -1 fixes off-by-one error
     }
     func parseProjectList(){
-        print("pls")
-        print(projectList.count)
         for project in projectList{
-            print("proj")
             let title = project.value["projectTitle"] as! String
-            print(title)
             titleAsKey[title] = project.value as? [String : AnyObject]
         }
         let sortedTitles = Array(titleAsKey.keys).sorted(by: <)
         var indexKey = 0
         for sortedTitle in sortedTitles {
-            print(sortedTitle)
             titleIndex.append(sortedTitle)
             indexKey+=1
         }
         self.tableView?.reloadData()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //var cell:UITableViewCell = (self.tableView?.dequeueReusableCell(withIdentifier: "cell"))! as UITableViewCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectListCell", for: indexPath as IndexPath) as! ProjectTableViewCell
         print(indexPath.row, titleIndex.count)
         let projName = titleIndex[indexPath.row]
@@ -73,18 +66,14 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         print("You selected cell #\(indexPath.row)!")
     }
     override func viewDidAppear(_ animated: Bool) {
-        print("hello")
         projectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
             // snapshot.children = all projects listed under FUID
-            //self.projectList.removeAll()
+
             let projList = snapshot.value as? [String : AnyObject] ?? [:]
             self.projectList = projList
-            print("world")
+
             self.parseProjectList()
             self.tableView?.reloadData()
-//            for project in snapshot.value as? Dictionary {
-//                self.projectList.append(project)
-//            }
         })
         
     }
