@@ -9,11 +9,11 @@
 import UIKit
 
 class UPTaskTableViewCell: UITableViewCell {
-    @IBOutlet weak var Name: UILabel!
+    @IBOutlet weak var projLabel: UILabel!
+    @IBOutlet weak var projName: UILabel!
     @IBOutlet weak var DueLabel: UILabel!
     @IBOutlet weak var Due: UILabel!
-    @IBOutlet weak var ProjLabel: UILabel!
-    @IBOutlet weak var ProjName: UILabel!
+    @IBOutlet weak var TaskName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

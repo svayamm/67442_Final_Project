@@ -11,7 +11,7 @@ import UIKit
 import Firebase
 
 class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let projectsRef = FIRDatabase.database().reference().child("tasks").child((FIRAuth.auth()?.currentUser?.uid)!)
+    let tasksRef = FIRDatabase.database().reference().child("tasks").child((FIRAuth.auth()?.currentUser?.uid)!)
     var taskList = [String:AnyObject]()
     var titleAsKey = [String:[String:AnyObject]]()
     var titleIndex = [String]()
@@ -27,12 +27,13 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView?.reloadData()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.taskList.count-1;
+        print("\(taskList.count) THIS HERE")
+        return self.taskList.count;
     }
     func parseTaskList(){
         print("pls")
         print(taskList.count)
-        for task in taskList{
+        for task in taskList{//should do if tasklist.count != 0
             print("task")
             let title = task.value["taskTitle"] as! String
             print(title)
@@ -49,7 +50,8 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //var cell:UITableViewCell = (self.tableView?.dequeueReusableCell(withIdentifier: "cell"))! as UITableViewCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskListCell", for: indexPath as IndexPath) as! ProjectTableViewCell
+        print("ew")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskListCell", for: indexPath as IndexPath) as! UPTaskTableViewCell
         print(indexPath.row, titleIndex.count)
         let taskName = titleIndex[indexPath.row]
         let taskAttributes = titleAsKey[taskName]! as [String:AnyObject]
@@ -58,7 +60,8 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // probably ought to format the date string nicely
         
         //cell.Due.text = deadlineString
-        cell.Title?.text = taskAttributes["taskTitle"] as! String
+        cell.TaskName?.text = "TEXT HERE"
+            //taskAttributes["taskTitle"] as! String
         //cell.taskCount = proj.tasks.count
         //cell.textLabel?.text = self.projectList[indexPath.row]
         
@@ -69,11 +72,11 @@ class TaskViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     override func viewDidAppear(_ animated: Bool) {
         print("hello")
-        projectsRef.observe(FIRDataEventType.value, with: { (snapshot) in
+        tasksRef.observe(FIRDataEventType.value, with: { (snapshot) in
             // snapshot.children = all projects listed under FUID
             //self.projectList.removeAll()
-            let projList = snapshot.value as? [String : AnyObject] ?? [:]
-            self.taskList = projList
+            let taskList = snapshot.value as? [String : AnyObject] ?? [:]
+            self.taskList = taskList
             print("world")
             self.parseTaskList()
             self.tableView?.reloadData()

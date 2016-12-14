@@ -277,10 +277,10 @@
             </objects>
             <point key="canvasLocation" x="104.8" y="44.527736131934034"/>
         </scene>
-        <!--View Controller-->
+        <!--Task View Controller-->
         <scene sceneID="oMs-VX-s8W">
             <objects>
-                <viewController id="ICj-gy-G9E" sceneMemberID="viewController">
+                <viewController id="ICj-gy-G9E" customClass="TaskViewController" customModule="Busy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Aqk-k2-1ab"/>
                         <viewControllerLayoutGuide type="bottom" id="Lde-LZ-FHm"/>
@@ -305,7 +305,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="24w-fd-cZd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskListCell" rowHeight="82" id="24w-fd-cZd">
                                         <rect key="frame" x="0.0" y="28" width="375" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="24w-fd-cZd" id="FT3-J7-cdb">
@@ -351,10 +351,17 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ICj-gy-G9E" id="XbH-JN-W3Y"/>
+                                    <outlet property="delegate" destination="ICj-gy-G9E" id="Nhk-55-xYg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="c10-bP-2N1" id="xTd-OG-Hne"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KR-Sn-GlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
