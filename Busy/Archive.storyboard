@@ -12,7 +12,7 @@
         <!--Archive-->
         <scene sceneID="Ylc-Aq-kQO">
             <objects>
-                <viewController storyboardIdentifier="Archive" title="Archive" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VJQ-zT-kAf" customClass="ViewController" customModule="Busy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Archive" title="Archive" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VJQ-zT-kAf" customClass="ArchiveViewController" customModule="Busy" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TQ4-ur-bdx"/>
                         <viewControllerLayoutGuide type="bottom" id="9Bg-XY-hl8"/>
@@ -34,7 +34,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bqb-bj-lCh">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="46" id="a35-0B-1Nx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="arViewCell" rowHeight="46" id="a35-0B-1Nx">
                                         <rect key="frame" x="0.0" y="28" width="375" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a35-0B-1Nx" id="2XB-YF-ynG">
@@ -156,7 +156,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="agendaTableView" destination="bqb-bj-lCh" id="PHi-sn-bpV"/>
+                        <outlet property="archiveTableView" destination="bqb-bj-lCh" id="Y4T-b6-uTL"/>
                         <outlet property="searchDisplayController" destination="Mzg-5m-sZB" id="JFt-73-n74"/>
                     </connections>
                 </viewController>

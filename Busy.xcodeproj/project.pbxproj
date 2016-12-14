@@ -35,10 +35,7 @@
 		A4F0D3DB1DF3B4590056E3E3 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F0D3D91DF3B4590056E3E3 /* TableViewCell.xib */; };
 		A5B1CA64326A98756A8C5145 /* Pods_Busy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD4A25D0EA8A660326258AC /* Pods_Busy.framework */; };
 		CB2F743B1DFABD9400228295 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2F743A1DFABD9400228295 /* CheckBox.swift */; };
-		CB53D1B11DE76C2E00AEEFAC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B01DE76C2E00AEEFAC /* Project.swift */; };
-		CB53D1B31DE76CE000AEEFAC /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B21DE76CE000AEEFAC /* Assignment.swift */; };
 		CB53D1B71DE76D8900AEEFAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B61DE76D8900AEEFAC /* User.swift */; };
-		CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53D1B81DE76DA500AEEFAC /* Task.swift */; };
 		CB54E6F01E005C0B0073B888 /* NewTaskFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB54E6EF1E005C0B0073B888 /* NewTaskFormViewController.swift */; };
 		CB54E6F21E00DA8A0073B888 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB54E6F11E00DA8A0073B888 /* TaskViewController.swift */; };
 		CB5CFB2A1DF8A83A00FFE8FA /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB291DF8A83A00FFE8FA /* ArchiveViewController.swift */; };
@@ -47,8 +44,6 @@
 		CB5CFB321DF8AA3000FFE8FA /* ArProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5CFB301DF8AA3000FFE8FA /* ArProjectTableViewCell.xib */; };
 		CB5CFB351DF8AA6200FFE8FA /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB331DF8AA6200FFE8FA /* ProjectTableViewCell.swift */; };
 		CB5CFB361DF8AA6200FFE8FA /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5CFB341DF8AA6200FFE8FA /* ProjectTableViewCell.xib */; };
-		CB5CFB381DF8AB9200FFE8FA /* ProjectListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB371DF8AB9200FFE8FA /* ProjectListViewModel.swift */; };
-		CB5CFB3A1DF8ABA400FFE8FA /* ArchiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB391DF8ABA400FFE8FA /* ArchiveViewModel.swift */; };
 		CB5CFB3C1DF8B5B800FFE8FA /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB3B1DF8B5B800FFE8FA /* UserProfileViewController.swift */; };
 		CB5CFB3E1DF8B5D600FFE8FA /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5CFB3D1DF8B5D600FFE8FA /* UserProfile.storyboard */; };
 		CB5CFB411DF8DF9500FFE8FA /* UPTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5CFB3F1DF8DF9500FFE8FA /* UPTaskTableViewCell.swift */; };
@@ -108,10 +103,7 @@
 		ADC30415670737454444E253 /* Pods-Busy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Busy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Busy/Pods-Busy.release.xcconfig"; sourceTree = "<group>"; };
 		C044EE2B2CB42A8FE4CE4CD4 /* Pods-BusyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusyUITests/Pods-BusyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB2F743A1DFABD9400228295 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
-		CB53D1B01DE76C2E00AEEFAC /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		CB53D1B21DE76CE000AEEFAC /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		CB53D1B61DE76D8900AEEFAC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CB53D1B81DE76DA500AEEFAC /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		CB54E6EF1E005C0B0073B888 /* NewTaskFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskFormViewController.swift; sourceTree = "<group>"; };
 		CB54E6F11E00DA8A0073B888 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		CB5CFB291DF8A83A00FFE8FA /* ArchiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
@@ -120,8 +112,6 @@
 		CB5CFB301DF8AA3000FFE8FA /* ArProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArProjectTableViewCell.xib; sourceTree = "<group>"; };
 		CB5CFB331DF8AA6200FFE8FA /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		CB5CFB341DF8AA6200FFE8FA /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
-		CB5CFB371DF8AB9200FFE8FA /* ProjectListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectListViewModel.swift; sourceTree = "<group>"; };
-		CB5CFB391DF8ABA400FFE8FA /* ArchiveViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveViewModel.swift; sourceTree = "<group>"; };
 		CB5CFB3B1DF8B5B800FFE8FA /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		CB5CFB3D1DF8B5D600FFE8FA /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
 		CB5CFB3F1DF8DF9500FFE8FA /* UPTaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPTaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -249,7 +239,6 @@
 				A465E9CD1DF5F3C500C40CF2 /* ProjectList.storyboard */,
 				CB5CFB331DF8AA6200FFE8FA /* ProjectTableViewCell.swift */,
 				CB5CFB341DF8AA6200FFE8FA /* ProjectTableViewCell.xib */,
-				CB5CFB371DF8AB9200FFE8FA /* ProjectListViewModel.swift */,
 			);
 			name = "'List of Projects' Tab";
 			sourceTree = "<group>";
@@ -322,9 +311,6 @@
 			isa = PBXGroup;
 			children = (
 				CB53D1B61DE76D8900AEEFAC /* User.swift */,
-				CB53D1B01DE76C2E00AEEFAC /* Project.swift */,
-				CB53D1B81DE76DA500AEEFAC /* Task.swift */,
-				CB53D1B21DE76CE000AEEFAC /* Assignment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -336,7 +322,6 @@
 				CB5CFB2B1DF8A89B00FFE8FA /* Archive.storyboard */,
 				CB5CFB2F1DF8AA3000FFE8FA /* ArProjectTableViewCell.swift */,
 				CB5CFB301DF8AA3000FFE8FA /* ArProjectTableViewCell.xib */,
-				CB5CFB391DF8ABA400FFE8FA /* ArchiveViewModel.swift */,
 			);
 			name = "'Archive' Tab";
 			sourceTree = "<group>";
@@ -646,19 +631,14 @@
 				A430D7EF1DD964DC004C6AAF /* ProjectsViewController.swift in Sources */,
 				A465E9D41DF7B67D00C40CF2 /* Notes for cleanup.swift in Sources */,
 				A430D7B61DD89015004C6AAF /* ViewController.swift in Sources */,
-				CB53D1B91DE76DA500AEEFAC /* Task.swift in Sources */,
 				A430D7B41DD89015004C6AAF /* AppDelegate.swift in Sources */,
-				CB5CFB3A1DF8ABA400FFE8FA /* ArchiveViewModel.swift in Sources */,
 				A430D7F31DD966EB004C6AAF /* NewViewController.swift in Sources */,
 				A47584021DF5BFB800C36AE4 /* NewTypesViewController.swift in Sources */,
 				CB5CFB411DF8DF9500FFE8FA /* UPTaskTableViewCell.swift in Sources */,
-				CB53D1B31DE76CE000AEEFAC /* Assignment.swift in Sources */,
 				CB53D1B71DE76D8900AEEFAC /* User.swift in Sources */,
 				CB5CFB351DF8AA6200FFE8FA /* ProjectTableViewCell.swift in Sources */,
-				CB5CFB381DF8AB9200FFE8FA /* ProjectListViewModel.swift in Sources */,
 				A430D7BC1DD89016004C6AAF /* Busy.xcdatamodeld in Sources */,
 				CB54E6F01E005C0B0073B888 /* NewTaskFormViewController.swift in Sources */,
-				CB53D1B11DE76C2E00AEEFAC /* Project.swift in Sources */,
 				CB5CFB2A1DF8A83A00FFE8FA /* ArchiveViewController.swift in Sources */,
 				A430D7F11DD964ED004C6AAF /* DetailsViewController.swift in Sources */,
 			);
