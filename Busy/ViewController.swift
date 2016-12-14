@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var userObject: User?
     // this is the user object that will be used throughout the application henceforth
@@ -18,8 +18,9 @@ class ViewController: UIViewController {
     var projects = [String:AnyObject]()
     var tasks = [String:AnyObject]()
     var displayList = [String:[ AnyObject]]()
-    var currentDate = NSDate()
-    var dateInWeek: NSDate
+    var currentDate = Date()
+    var dateInWeek = Date()
+    var itemsToDisplay = [AnyObject]()
 
     
     @IBOutlet var agendaTableView: UITableView!
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        convertCurrentDate()
+        //convertCurrentDate()
 
         let usersRef = rootRef.child("users")
         // creating child node for 'users' directory in database
@@ -46,7 +47,7 @@ class ViewController: UIViewController {
         // UUID converted to string as database cannot store type UUID
         // dictionary of user info created, to be passed into database
         // This is only done once, so the userObject can be discarded.
-        idRef.updateChildValues(userDict, withCompletionBlock: {
+        idRef.updateChildValues(userDict, withCompletionBlock: { // can only be called in view function
             (err, ref) in
             
             if err != nil {
@@ -55,6 +56,10 @@ class ViewController: UIViewController {
             
             print("Successfully saved user in FIR Database")
         })
+        
+        let cellNib = UINib(nibName: "TableViewCell", bundle: nil)
+        agendaTableView?.register(cellNib, forCellReuseIdentifier: "agendaViewCell")
+        self.agendaTableView?.reloadData()
     }
     
 
@@ -68,17 +73,8 @@ class ViewController: UIViewController {
     // for the segmented control on top
     @IBAction func indexChanged(sender:UISegmentedControl)
     {
-        switch timeframeSegment.selectedSegmentIndex
-        {
-        case 0:
-            print("Today selected");
-        case 1:
-            print("This Week selected");
-        case 2:
-            print("All Items selected");
-        default:
-            break;
-        }
+        determineTableValues()
+        self.agendaTableView?.reloadData()
     }
     
     // MARK: - Database retrieval
@@ -88,7 +84,8 @@ class ViewController: UIViewController {
             self.data = dataDict
             
             self.parseDataDict()
-            //self.tableView?.reloadData()
+            self.determineTableValues()
+            self.agendaTableView?.reloadData()
         })
         
     }
@@ -109,7 +106,8 @@ class ViewController: UIViewController {
         for project in projects {
             let deadline = project.value["projectDeadline"] as? String ?? "NA"
             var existingItems = displayList[deadline] as [AnyObject]? ?? []
-            let newItems = existingItems.append(project.value)
+            existingItems.append(project.value)
+            let newItems = existingItems
             displayList[deadline] = newItems
         }
         //self.tableView?.reloadData()
@@ -118,7 +116,8 @@ class ViewController: UIViewController {
         for task in tasks {
             let deadline = task.value["taskDeadline"] as? String ?? "NA"
             var existingItems = displayList[deadline] as [AnyObject]? ?? []
-            let newItems = existingItems.append(task.value)
+            existingItems.append(task.value)
+            let newItems = existingItems
             displayList[deadline] = newItems
         }
     }
@@ -126,78 +125,122 @@ class ViewController: UIViewController {
     // MARK:- Working with dates
 
     
-    func convertCurrentDate() {
-        let dateFormatter2 = DateFormatter()
-        dateFormatter2.timeStyle = DateFormatterStyle.NoStyle // strips time from string
-        dateFormatter2.dateStyle = NSDateFormatterStyle.MediumStyle
-        print(dateFormatter2.stringFromDate(currentDate)) // returns currentDate as date only, no time
-        let dateFormatter3 = DateFormatter()
-        dateFormatter3.dateFormat = "EEEE, MMMM dd, yyyy" // EEEE is Day of week
-        let todayNSDate = dateFormatter3.dateFromString(currentDate)
-        // converts currentDate back to NSDate object for comparison
-        currentDate = todayNSDate
-        let newDateComponents = NSDateComponents()
-        newDateComponents.day = 7
-        dateInWeek = NSCalendar.currentCalendar().dateByAddingComponents(newDateComponents, toDate: currentDate, options: NSCalendarOptions.init(rawValue: 0))
-        // sets dateInWeek to 7 days from currentDate
-    }
+//    func convertCurrentDate() {
+//        let dateFormatter2 = DateFormatter()
+//        dateFormatter2.timeStyle = .none // strips time from string
+//        dateFormatter2.dateStyle = .medium
+//        let stringCurrent = dateFormatter2.string(from: currentDate as Date) // returns currentDate as date only, no time
+//        let dateFormatter3 = DateFormatter()
+//        dateFormatter3.dateFormat = "EEEE, MMMM dd, yyyy" // EEEE is Day of week
+//        let todayNSDate = dateFormatter3.date(from: stringCurrent)
+//        // converts currentDate back to NSDate object for comparison
+//        currentDate = todayNSDate!
+//        let locale = Locale.current
+//        var calendar = Calendar.Identifier(locale)
+//        let dateComponents = Calendar.dateComponents(Calendar.current)
+//            //.dateComponents([.day, .month, .year], from: currentDate)
+//        var newDateComponents = DateComponents()
+//        newDateComponents.day = 7
+//        dateInWeek = Calendar.current.date(byAdding: newDateComponents, to: currentDate)!
+//        // sets dateInWeek to 7 days from currentDate
+//    }
 
-    func convertDeadline(deadline: String)->NSDate{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy" // EEEE is Day of week
-        let deadlineNSDate = dateFormatter.dateFromString(deadline)
-        return deadlineNSDate
-    }
+//    func convertDeadline(deadline: String)->Date{
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy" // EEEE is Day of week
+//        let deadlineNSDate = dateFormatter.date(from: deadline)
+//        return deadlineNSDate!
+//    }
     
     // MARK:- Filters for chosen segment
-    var todayList = [AnyObject]()
-    func filterForToday(){
+//    var todayList = [AnyObject]()
+//    func filterForToday(){
+//        for deadline in displayList.keys{
+//            if deadline == "NA" {continue} // skip items where deadline not set
+//            else {
+//                let deadlineNSDate = convertDeadline(deadline: deadline)
+//                if deadlineNSDate <= currentDate{
+//                    for itemDictionary in displayList[deadline]! {
+//                        todayList.append(itemDictionary)
+//                    }
+//                }
+//            }
+//        }
+//    }
+//    
+//    var weekList = [AnyObject]()
+//    func filterForWeek(){
+//        for deadline in displayList.keys{
+//            if deadline == "NA" {continue} // skip items where deadline not set
+//            else {
+//                let deadlineNSDate = convertDeadline(deadline: deadline)
+//                if deadlineNSDate <= dateInWeek{
+//                    for itemDictionary in displayList[deadline]! {
+//                        weekList.append(itemDictionary)
+//                    }
+//                }
+//            }
+//        }
+//    }
+    
+    var allList = [AnyObject]()
+    func noFilter(){
+        allList = []
         for deadline in displayList.keys{
-            if deadline == "NA" {continue} // skip items where deadline not set
-            else {
-                deadlineNSDate = convertDeadline(deadline)
-                if deadlineNSDate == deadlineNSDate.earlierDate(currentDate){
-                    for itemDictionary in deadline.values {
-                        todayList.append(itemDictionary)
-                    }
-                }
+            for itemDictionary in displayList[deadline]! {
+                allList.append(itemDictionary)
             }
         }
     }
-    
-    var weekList = [AnyObject]()
-    func filterForWeek(){
-        for deadline in displayList.keys{
-            if deadline == "NA" {continue} // skip items where deadline not set
-            else {
-                deadlineNSDate = convertDeadline(deadline)
-                if deadlineNSDate == deadlineNSDate.earlierDate(dateInWeek){
-                    for itemDictionary in deadline.values {
-                        weekList.append(itemDictionary)
-                    }
-                }
-            }
-        }
-    }
-    
 
     func determineTableValues(){
         switch timeframeSegment.selectedSegmentIndex
         {
         case 0:
             print("Today selected");
-            filterForToday();
-            
+            //filterForToday();
+            //itemsToDisplay = todayList
         case 1:
             print("This Week selected");
-            filterForWeek()
+            //filterForWeek();
+            //itemsToDisplay = weekList
         case 2:
             print("All Items selected");
+            noFilter();
+            itemsToDisplay = allList
         default:
             break;
         }
     }
     
-    
+    // MARK:- Delegate functions for table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.itemsToDisplay.count;
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = agendaTableView.dequeueReusableCell(withIdentifier: "agendaViewCell", for: indexPath as IndexPath) as! TableViewCell
+        
+        let item = itemsToDisplay[indexPath.row] as? [String:AnyObject] ?? [:]
+        //let deadlineString = projectAttributes["projectDeadline"] as! String
+        
+        // probably ought to format the date string nicely
+        
+        //cell.Due.text = deadlineString
+        if let titleString = item["projectTitle"] as? String {
+            cell.Title.text = titleString
+        } else {
+            let titleString = item["taskTitle"] as! String
+            cell.Title.text = titleString
+        }
+        //cell.Title?.text = item["projectTitle"] ?? item["taskTitle"]
+        //cell.taskCount = proj.tasks.count
+        //cell.textLabel?.text = self.projectList[indexPath.row]
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected cell #\(indexPath.row)!")
+    }
 }
 
