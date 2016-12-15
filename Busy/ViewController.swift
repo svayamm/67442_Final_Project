@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var projects = [String:AnyObject]()
     var tasks = [String:AnyObject]()
     var displayList = [String:[ AnyObject]]()
+    // a dictionary of deadline:[item], where item can be a project or a task (i.e. another [String:AnyObject], so essentially deadline:[[String:AnyObject]])
     var currentDate = Date()
     var newDateComponents = DateComponents()
     var itemsToDisplay = [AnyObject]()
@@ -78,6 +79,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     // MARK: - Database retrieval
+    
+/*
+ For reading data from the Firebase database, provide it with a reference location (as above)
+ 
+ observe(Event) will continuously monitor the database location for any changes,
+ such that any changes made to the child data at said location will be 'immediately' reflected in the view
+ */
     override func viewDidAppear(_ animated: Bool) {
         rootRef.observe(FIRDataEventType.value, with: { (snapshot) in
             let dataDict = snapshot.value as? [String : AnyObject] ?? [:]
@@ -102,6 +110,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         parseTasksList()
 
     }
+    
+    /* 
+     Store all items (in this case, projects and tasks) in a single array (displayItems), with the key being the item's deadline. When loading the data for the agenda table view, take displayItems and filter.
+     */
     func parseProjectList(){
         for project in projects {
             let deadline = project.value["projectDeadline"] as? String ?? "NA"
@@ -144,6 +156,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        dateInWeek = Calendar.current.date(byAdding: newDateComponents, to: currentDate)!
 //        // sets dateInWeek to 7 days from currentDate
 //    }
+    
+    /*
+     Convert each deadline string to an NSDate object, and compare; using separate function for each 'tab' (due today / this week / all items)
+     */
 
     func convertDeadline(deadline: String)->Date{
         let dateFormatter = DateFormatter()
