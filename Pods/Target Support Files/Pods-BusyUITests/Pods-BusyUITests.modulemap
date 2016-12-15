@@ -1,0 +1,6 @@
+framework module Pods_BusyUITests {
+  umbrella header "Pods-BusyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

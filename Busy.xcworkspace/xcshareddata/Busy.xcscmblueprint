@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9B23604A2A0B310BF94E67B317DCB50FB7B8367F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9B23604A2A0B310BF94E67B317DCB50FB7B8367F" : 9223372036854775807,
+    "1BBED98C7CC3CE43384057C9EDACF57CFE37A566" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47E1C286-DB3B-4174-B8A1-ABA2B45CF7F1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9B23604A2A0B310BF94E67B317DCB50FB7B8367F" : "67442_Final_Project\/",
+    "1BBED98C7CC3CE43384057C9EDACF57CFE37A566" : "67442_Final_Project\/DistributeViewsEvenly-Swift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Busy",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Busy.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/chrisben\/DistributeViewsEvenly-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1BBED98C7CC3CE43384057C9EDACF57CFE37A566"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/svayamm\/67442_Final_Project.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9B23604A2A0B310BF94E67B317DCB50FB7B8367F"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kfs-cp-uhA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SignInViewController-->
+        <scene sceneID="duv-9V-pvj">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" title="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kfs-cp-uhA" customClass="SignInViewController" customModule="Busy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j4U-ww-Eyl"/>
+                        <viewControllerLayoutGuide type="bottom" id="8by-9j-ZtN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qfv-zq-Khh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="To continue, please login  with a Google account:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6O-wY-AkK">
+                                <frame key="frameInset" minX="57.681481481481569" minY="164" width="257.99999999999977" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="258" id="rfa-CA-YZA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y6O-wY-AkK" firstAttribute="top" secondItem="j4U-ww-Eyl" secondAttribute="bottom" constant="144" id="Bwz-pg-BP2"/>
+                            <constraint firstItem="Y6O-wY-AkK" firstAttribute="centerX" secondItem="Qfv-zq-Khh" secondAttribute="centerX" id="jUC-at-dYt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="5hl-zM-DWo" kind="show" identifier="LoginToMain" id="IfN-vs-6oY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJd-jT-hsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.60000000000002" y="-74.212893553223395"/>
+        </scene>
+        <!--Agenda-->
+        <scene sceneID="Opo-YV-Eyl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Agenda" id="5hl-zM-DWo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zku-aO-OBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="-16"/>
+        </scene>
+    </scenes>
+</document>

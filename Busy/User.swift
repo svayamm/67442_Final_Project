@@ -8,16 +8,38 @@
 
 import Foundation
 
-class User {
-    var firstName: String
-    var lastName: String
+struct User {
+    let id: UUID
+    let firebaseUID: String // Firebase provides a UID (well, technically Google does, upon authentication)
+    var displayName: String
     var email: String
-    var role: String
+    var projects: [String] // Denormalising for easier access in Firebase's NoSQL database
     
-    init(firstName: String, lastName: String, email: String, role: String) {
-        self.firstName = firstName
-        self.lastName = lastName
+    init(firebaseUID: String, displayName: String, email: String) {
+        self.id = NSUUID.init() as UUID
+        self.firebaseUID = firebaseUID
+        self.displayName = displayName
         self.email = email
-        self.role = role
+        self.projects = []
+    }
+    
+    mutating func addProject(projectUUID: String) {
+        self.projects.append(projectUUID)
+}
+    
+//    mutating func changeFirstName(firstName: String) {
+//        self.firstName = firstName
+//    }
+//    mutating func changeLastName(lastName: String) {
+//        self.lastName = lastName
+//    }
+//    mutating func changeEmail(email: String) {
+//        self.email = email
+//    }
+    // These functions are set by the authenticator (Google) upon login
+}
+extension User: Equatable {
+    static public func ==(lhs: User, rhs: User) -> Bool {
+        return (lhs.id == rhs.id)
     }
 }
